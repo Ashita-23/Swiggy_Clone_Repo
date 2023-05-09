@@ -1,0 +1,27 @@
+{
+  "name": "swiggyclone",
+  "version": "1.0.0",
+  "description": "my swiggy clone project created from sratch with react parcel and npm .",
+  "main": "App.js",
+  "scripts": {
+    "test": "textapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashita-23/Swiggy_Clone_Repo.git"
+  },
+  "author": "Ashita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashita-23/Swiggy_Clone_Repo/issues"
+  },
+  "homepage": "https://github.com/Ashita-23/Swiggy_Clone_Repo#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
