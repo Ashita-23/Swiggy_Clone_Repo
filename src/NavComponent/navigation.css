@@ -1,0 +1,41 @@
+
+.Nav-box{
+    height: 4rem;
+    width: 99vw;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+background-color: transparent;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Logo-box{
+    background-color: transparent;
+}
+
+.Logo-text{
+    color: red;
+    padding: 0.3rem 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1.5px solid red;
+    background-color: transparent;
+}
+
+.Logo-ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.Logo-ul li {
+padding: 0.8rem 1rem;
+font-size: 1.1rem;
+color: rgb(156, 155, 155);
+/* border: 1.5px solid red; */
+}
