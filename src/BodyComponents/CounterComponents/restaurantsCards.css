@@ -1,0 +1,101 @@
+.cards-outer {
+  margin: 1rem;
+  height: auto;
+  width: 20rem;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.image-box {
+  height: 12rem;
+  width: 18rem;
+  border: 1px solid red;
+}
+.image {
+  height: 12rem;
+  width: 18rem;
+}
+.cards-detail {
+  margin-top: 0.5rem;
+  height: auto;
+  width: 18rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* border: 1px solid greenyellow; */
+}
+.name-box {
+  font-size: 1.2rem;
+  color: rgb(77, 77, 77);
+  font-weight: 500;
+  padding: 0.2rem 0rem;
+  /* border: 1px solid rgb(41, 66, 3); */
+}
+
+.cuisine-box {
+  font-size: 1rem;
+  color: rgb(77, 77, 77);
+  font-weight: 400;
+  overflow: hidden;
+  text-align: left;
+  white-space: none;
+  padding: 0.5rem 0rem;
+  /* border: 1px solid rgb(30, 48, 2); */
+}
+.MRP-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  /* border: 1px solid rgb(243, 140, 6); */
+  border-bottom: 1px solid gray;
+  padding: 0.5rem 0rem;
+
+}
+
+.rating-box {
+    font-size: 1rem;
+    color: greenyellow;
+
+}
+
+.time-box {
+    font-size: 1rem;
+    color: rgb(187, 187, 187);
+}
+
+.Price-box {
+    font-size: 1rem;
+    color: rgb(187, 187, 187);
+}
+
+.offer-and-view-box{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+.offer-box {
+    padding: 0.5rem 0rem ;
+    /* border: 1px solid red; */
+    color: brown;
+}
+
+.card-view-btn {
+    padding: 0.5rem 0rem ;
+    border: none;
+    background-color: transparent;
+    outline: none ;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-top: 1px solid transparent;
+
+    /* border: 1px solid red; */
+    color: rgb(16, 138, 253);
+    /* transition: 1s; */
+}
+.card-view-btn:hover{
+    color: rgb(134, 132, 132);
+    border-top: 1px solid gray;
+}
