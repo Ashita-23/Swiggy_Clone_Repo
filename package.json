@@ -2,8 +2,10 @@
   "name": "swiggyclone",
   "version": "1.0.0",
   "description": "my swiggy clone project created from sratch with react parcel and npm .",
-  "main": "App.js",
+
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "textapp"
   },
   "repository": {
