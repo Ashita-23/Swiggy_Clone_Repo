@@ -1,6 +1,6 @@
 
-
 import "./cardsCounter.css"
+import RestaurantsCards from "./RestaurantsCards"
 
 const RestaurantCounter = () =>{
     return(<>
@@ -13,11 +13,11 @@ const RestaurantCounter = () =>{
                 <div className="btn-group">
                     <button className="btn">Relevance</button>
                     <button className="btn">Delivery Time</button>
-                    <button className="btn">Rating</button>
+                    <button className="btn">Top Rating</button>
                 </div>
             </div>
             <div className="card-display-outer">
-
+                        <RestaurantsCards/>
             </div>
         </div>
     </>)
