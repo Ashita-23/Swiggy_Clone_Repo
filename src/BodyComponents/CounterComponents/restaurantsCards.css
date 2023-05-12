@@ -3,17 +3,22 @@
   height: auto;
   width: 20rem;
   padding: 1rem;
-  border: 1px solid red;
+  border: 1px solid transparent;
+  transition: 1s;
+}
+.cards-outer:hover{
+  border: 1px solid rgb(216, 216, 216);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .image-box {
   height: 12rem;
   width: 18rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .image {
-  height: 12rem;
-  width: 18rem;
+  height: 11.85rem;
+  width: 17.85rem;
 }
 .cards-detail {
   margin-top: 0.5rem;
@@ -25,7 +30,7 @@
   /* border: 1px solid greenyellow; */
 }
 .name-box {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgb(77, 77, 77);
   font-weight: 500;
   padding: 0.2rem 0rem;
@@ -33,14 +38,15 @@
 }
 
 .cuisine-box {
-  font-size: 1rem;
-  color: rgb(77, 77, 77);
-  font-weight: 400;
-  overflow: hidden;
-  text-align: left;
-  white-space: none;
+  font-size: 0.8rem;
+  color: rgb(34, 34, 34);
+  font-weight: 380;
   padding: 0.5rem 0rem;
   /* border: 1px solid rgb(30, 48, 2); */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+text-transform: capitalize;
 }
 .MRP-box {
     display: flex;
@@ -48,24 +54,34 @@
     flex-direction: row;
     justify-content: space-evenly;
   /* border: 1px solid rgb(243, 140, 6); */
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(219, 217, 217);
   padding: 0.5rem 0rem;
 
 }
 
 .rating-box {
-    font-size: 1rem;
-    color: greenyellow;
+    font-size: 0.9rem;
+    color: rgb(248, 248, 248);
+  background-color: rgb(1, 180, 1);
+  padding: 0.2rem 0.5rem;
+
+}
+
+.low-rating{
+    /* font-size: 0.9rem; */
+    /* color: rgb(248, 248, 248); */
+  background-color: #DB7C38;
+  /* padding: 0.2rem 0.5rem; */
 
 }
 
 .time-box {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: rgb(187, 187, 187);
 }
 
 .Price-box {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: rgb(187, 187, 187);
 }
 
@@ -78,6 +94,7 @@
 }
 .offer-box {
     padding: 0.5rem 0rem ;
+    font-size: 0.9rem;
     /* border: 1px solid red; */
     color: brown;
 }
@@ -92,7 +109,7 @@
     border-top: 1px solid transparent;
 
     /* border: 1px solid red; */
-    color: rgb(16, 138, 253);
+    color: rgb(5, 120, 228);
     /* transition: 1s; */
 }
 .card-view-btn:hover{
