@@ -82,5 +82,6 @@ flex-direction: row;
 flex-wrap: wrap;
 align-items: flex-start;
 padding: 1rem 0.5rem;
+justify-content: space-evenly;
 /* border: 1px solid red; */
 }
