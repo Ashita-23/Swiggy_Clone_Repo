@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./cardsCounter.css";
 import RestaurantsCards from "./RestaurantsCards";
 import { Swiggy_API_URL } from "../../Util/ApiConfig";
+import ErrorInSearch from "../../ErrorCompos/searchTextError";
 
 const RestaurantCounter = () => {
   const [allRestaurant, setAllRestaurant] = useState([]);
@@ -21,6 +22,15 @@ const RestaurantCounter = () => {
     setAllRestaurant(JsonData?.data?.cards);
     setResturantList(JsonData?.data?.cards);
   }
+
+
+  function getFilterList(inputText,allRestaurant){
+    console.log(inputText,"inputText")
+    console.log(allRestaurant,"ARL")
+  const filterItems = allRestaurant.filter((Restaurants)=>Restaurants?.data?.data?.name?.toLowerCase().includes(inputText)) ;
+console.log(filterItems , "filterItems")  ;
+return filterItems
+}
 
   function getFastDelivery(allRestaurant) {
     console.log(allRestaurant);
@@ -50,7 +60,9 @@ const RestaurantCounter = () => {
               value={inputText}
               onChange={(event) => setInputText(event.target.value)}
             />
-            <button type="submit" className="input-btn">
+            <button type="submit" className="input-btn" onClick={()=>{
+                    const filterList = getFilterList(inputText,allRestaurant);
+                   (filterList === 0)? setResturantList(allRestaurant): setResturantList(filterList)}}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -82,10 +94,9 @@ const RestaurantCounter = () => {
             }
             return (
               <>
-                {" "}
                 <RestaurantsCards
                   resturantLists={cards}
-                  key={cards?.data?.data.id}
+                  key={cards?.data?.data?.id}
                 />
               </>
             );
