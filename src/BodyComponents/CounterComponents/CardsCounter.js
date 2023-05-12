@@ -55,7 +55,9 @@ const RestaurantCounter = () => {
             </button>
           </div>
           <div className="btn-group">
-            <button className="btn" >Relevance</button>
+            <button className="btn" onClick={()=>{
+                setResturantList(allRestaurant)
+            }} >Relevance</button>
             <button
               className="btn"
               onClick={() => {
