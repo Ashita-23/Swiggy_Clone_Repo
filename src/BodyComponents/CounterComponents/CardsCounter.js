@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./cardsCounter.css";
 import RestaurantsCards from "./RestaurantsCards";
 import { Swiggy_API_URL } from "../../Util/ApiConfig";
-import ErrorInSearch from "../../ErrorCompos/searchTextError";
+// import ErrorInSearch from "../../ErrorCompos/searchTextError";
+import CardsShimmer from "../ShimmerComponents/CardsShimmer";
 
 const RestaurantCounter = () => {
   const [allRestaurant, setAllRestaurant] = useState([]);
@@ -88,19 +89,13 @@ return filterItems
           </div>
         </div>
         <div className="card-display-outer">
-          {resturantList?.map((cards) => {
-            {
-              /* console.log(cards,"cards") */
-            }
-            return (
-              <>
-                <RestaurantsCards
-                  resturantLists={cards}
-                  key={cards?.data?.data?.id}
-                />
-              </>
-            );
+
+        {
+          resturantList?.map((cards)=>{
+          
+            return resturantList.length === 0 ?  ( <CardsShimmer/> ) : ( <RestaurantsCards resturantLists={cards} key={cards?.data?.data?.id}/>);
           })}
+
         </div>
       </div>
     </>
