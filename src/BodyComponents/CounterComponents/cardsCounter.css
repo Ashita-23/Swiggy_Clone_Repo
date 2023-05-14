@@ -74,6 +74,20 @@ transition: 1s ;
 
 .card-display-outer{
     height: auto;
+
+width: 70vw;
+display: flex;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+/* padding: 1rem 0.5rem; */
+/* justify-content: space-evenly; */
+/* border: 1px solid red; */
+}
+
+.card-display-inner{
+    height: auto;
 min-height: 99vh;
 width: 70vw;
 display: flex;
@@ -84,4 +98,14 @@ align-items: flex-start;
 padding: 1rem 0.5rem;
 justify-content: space-evenly;
 /* border: 1px solid red; */
+}
+
+.Errorhidden{
+    border: 1px solid red;
+    display: none;
+}
+
+.Errorshow{
+  display: initial;
+ 
 }
