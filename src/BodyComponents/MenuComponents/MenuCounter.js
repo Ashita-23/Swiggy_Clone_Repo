@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react"
+import {useParams} from "react-router-dom"
 import "./menuCounter.css"
 import MenuCards from "./MenuCards"
 import CounterShimmer from "../ShimmerComponents/CounterShimmer"
 import CardsShimmer from "../ShimmerComponents/CardsShimmer"
 const MenuCounter = () =>{
+const restaurantId = useParams() ;
+console.log(restaurantId)
+
+
+
 
     const [menu , setMenu] = useState([])
     console.log(menu,"menu  ")
@@ -13,7 +19,7 @@ const MenuCounter = () =>{
     },[])
 
 async function getMenuList(){
-        const Swiggy_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.38704&lng=77.2821787&restaurantId=35915&submitAction=ENTER";
+        const Swiggy_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.38704&lng=77.2821787&restaurantId="+restaurantId.id+"&submitAction=ENTER";
       const MenuList = await fetch(Swiggy_MENU_API_URL) ;
       const Json = await MenuList.json()
     //   console.log(Json, "main")
