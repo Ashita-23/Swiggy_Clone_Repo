@@ -1,15 +1,16 @@
 
+import {Link} from "react-router-dom"
 import "./navigation.css"
 
 const Navigation = ()=>{
     return(<>
    <nav className="Nav-box">
-    <div className="Logo-box"><span className="Logo-text">Foodies</span></div>
+    <div className="Logo-box"><span className="Logo-text"><Link to="/restaurant">Foodies</Link></span></div>
     <ul className="Logo-ul">
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>USER</li>
-        <li>CART</li>
+        <li><Link to="/">HOME</Link></li>
+        <li><Link>ABOUT</Link></li>
+        <li><Link>USER</Link></li>
+        <li><Link>CART</Link></li>
     </ul>
    </nav>
     </>)
