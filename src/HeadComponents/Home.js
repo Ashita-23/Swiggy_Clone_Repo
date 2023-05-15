@@ -1,4 +1,5 @@
 import "./home.css";
+import {Link} from "react-router-dom"
 import {Home_Config } from  "../Assets/Home_Assets/homeConfig"
 import Swigyy from  "../Assets/Home_Assets/Swigyy.gif"
 import Home_Cards from "./homeCards";
@@ -16,7 +17,7 @@ const Home = () => {
               Accusantium suscipit provident et explicabo, sed ducimus eaque
               saepe in id vitae at quidem beatae ea maxime.
             </p>
-            <button className="home-btn">order now</button>
+            <button className="home-btn"><Link to={"/restaurant"}>order now</Link></button>
           </div>
           <div className="home-image-box">
             <img src={Swigyy} className="img-box"/>
