@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import "./menuCounter.css"
 import MenuCards from "./MenuCards"
-
+import CounterShimmer from "../ShimmerComponents/CounterShimmer"
+import CardsShimmer from "../ShimmerComponents/CardsShimmer"
 const MenuCounter = () =>{
 
     const [menu , setMenu] = useState([])
@@ -21,12 +22,12 @@ async function getMenuList(){
     
     }
 
-    return(<>
+    return (!menu) ? <CounterShimmer/> : (<>
         <div className="menu-outer">
             <h1 className="menu-heading">{menu?.card?.card?.title}</h1>
             <div className="menu-inner">
   { menu?.card?.card?.itemCards?.map((menuLists)=>{
-    return(<><MenuCards menuLists={menuLists}  key={menuLists?.card?.info?.id} ></MenuCards></>)
+    return menu.length === 0 ? <CardsShimmer/> : (<><MenuCards menuLists={menuLists}  key={menuLists?.card?.info?.id} ></MenuCards></>)
   })
     }
             </div>
