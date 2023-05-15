@@ -2,7 +2,6 @@
   "name": "swiggyclone",
   "version": "1.0.0",
   "description": "my swiggy clone project created from sratch with react parcel and npm .",
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -24,6 +23,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1"
   }
 }
