@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 import "./cardsCounter.css";
 import RestaurantsCards from "./RestaurantsCards";
 import { Swiggy_API_URL } from "../../Util/ApiConfig";
-import ErrorInSearch from "../../ErrorCompos/searchTextError";
+import ErrorInSearch from "../../ErrorCompos/Errors";
 import CounterShimmer from "../ShimmerComponents/CounterShimmer";
 import CardsShimmer from "../ShimmerComponents/CardsShimmer";
 
 const RestaurantCounter = () => {
   const [allRestaurant, setAllRestaurant] = useState([]);
-  //  console.log(allResturant,"all")
+   console.log(allRestaurant,"all")
   const [resturantList, setResturantList] = useState([]);
   //  console.log(resturantList,"copy")
   const [inputText, setInputText] = useState(" ");
@@ -98,7 +99,7 @@ return filterItems
 
         {
           resturantList?.map((cards)=>{
-            return resturantList.length === 0 ?  ( <CardsShimmer/> ) : ( <RestaurantsCards resturantLists={cards} key={cards?.data?.data?.id}/>);
+            return resturantList.length === 0 ?  ( <CardsShimmer/> ) : ( <Link to={"/restaurant/"+ cards?.data?.data?.id} ><RestaurantsCards resturantLists={cards} key={cards?.data?.data?.id}/> </Link>);
           })}
 
         </div>
