@@ -8,8 +8,8 @@
     height: auto;
     width: 20rem;
     padding: 0.5rem ;
-    border: 1px solid rgb(187, 187, 187);
-    background-color: rgb(236, 236, 236);
+    /* border: 1px solid rgb(187, 187, 187); */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
      align-items: center;
@@ -20,7 +20,7 @@
     height: 12rem;
     width: 18rem;
     /* border: 1px solid rgb(247, 26, 26); */
-
+  border-radius: 5px;
     background-color: rgb(214, 212, 212);
 
 }
@@ -30,6 +30,7 @@
     height: 2rem;
     width: 18rem;
     /* border: 1px solid rgb(224, 20, 20); */
+    border-radius: 5px;
 
     background-color: rgb(214, 212, 212);
 
