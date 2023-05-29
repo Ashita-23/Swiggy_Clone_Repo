@@ -33,7 +33,9 @@ async function getMenuList(){
             <h1 className="menu-heading">{menu?.card?.card?.title}</h1>
             <div className="menu-inner">
   { menu?.card?.card?.itemCards?.map((menuLists)=>{
-    return menu.length === 0 ? <CardsShimmer/> : (<><MenuCards menuLists={menuLists}  key={menuLists?.card?.info?.id} ></MenuCards></>)
+    {/* console.log(menu?.card?.card?.itemCards.length,"menuListslength") */}
+
+    return menu?.card?.card?.itemCards.length===0 ? <CardsShimmer/>:(<MenuCards menuLists={menuLists}  key={menuLists?.card?.info?.id} ></MenuCards>)
   })
     }
             </div>
