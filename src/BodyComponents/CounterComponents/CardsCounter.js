@@ -9,7 +9,7 @@ import CardsShimmer from "../ShimmerComponents/CardsShimmer";
 
 const RestaurantCounter = () => {
   const [allRestaurant, setAllRestaurant] = useState([]);
-   console.log(allRestaurant,"all")
+  //  console.log(allRestaurant,"all")
   const [resturantList, setResturantList] = useState([]);
   //  console.log(resturantList,"copy")
   const [inputText, setInputText] = useState(" ");
@@ -49,11 +49,13 @@ return filterItems
   function getTopRatedcards(allRestaurant) {
     // console.log(allRestaurant,"00")
     const topRated = allRestaurant?.filter(
-      (cards) => cards?.data?.data?.avgRating > 3.5
+      (cards) => cards?.data?.data?.avgRating > 3.7
     );
     return topRated;
   }
 
+
+  if(!allRestaurant) return null;
 
   return  (resturantList.length===0) ? <CounterShimmer/> : (
     <>

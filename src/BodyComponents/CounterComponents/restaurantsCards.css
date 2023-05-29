@@ -6,6 +6,10 @@
   border: 1px solid transparent;
   transition: 1s;
 }
+
+a{
+  text-decoration: none;
+}
 .cards-outer:hover{
   border: 1px solid rgb(216, 216, 216);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
