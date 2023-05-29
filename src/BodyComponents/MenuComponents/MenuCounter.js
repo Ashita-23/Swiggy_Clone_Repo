@@ -6,13 +6,13 @@ import CounterShimmer from "../ShimmerComponents/CounterShimmer"
 import CardsShimmer from "../ShimmerComponents/CardsShimmer"
 const MenuCounter = () =>{
 const restaurantId = useParams() ;
-console.log(restaurantId)
+// console.log(restaurantId)
 
 
 
 
     const [menu , setMenu] = useState([])
-    console.log(menu,"menu  ")
+    // console.log(menu,"menu  ")
 
     useEffect(()=>{
         getMenuList()
