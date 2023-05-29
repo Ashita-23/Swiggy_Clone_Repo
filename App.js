@@ -8,10 +8,12 @@ import RestaurantCounter from "./src/BodyComponents/CounterComponents/CardsCount
 import Footer from "./src/FooterComponents/Footer"
 import ErrorInSearch from "./src/ErrorCompos/Errors"
 import MenuCounter from "./src/BodyComponents/MenuComponents/MenuCounter"
+import Carts from "./src/BodyComponents/CartComponents/Cart"
+import { Provider } from "react-redux"
+import FoodStore from "./src/Util/FoodStore"
 
 const App = ()=>{
-    return(<>
-
+    return(<> <Provider store={FoodStore}> 
         <Navigation/>
         {/* <Home/> */}
         {/* <RestaurantCounter/> */}
@@ -20,6 +22,7 @@ const App = ()=>{
         <Outlet/>
 
         <Footer/>
+        </Provider> 
     </>)
 }
 
@@ -45,6 +48,13 @@ const AppRouting = createBrowserRouter([
             {
                         path:"/restaurant/:id",
                         element:<MenuCounter/>,
+                        errorElement : <ErrorInSearch/>,
+
+          },
+             
+            {
+                        path:"/cart",
+                        element:<Carts/>,
                         errorElement : <ErrorInSearch/>,
 
           }
