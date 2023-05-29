@@ -1,0 +1,140 @@
+@media (min-width: 240px) {
+}
+@media (min-width: 375px) {
+    .Nav-box{
+        padding: 0rem 0.5rem;
+        width: 100%;
+    }
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size:1rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid rgb(252, 0, 0);
+        background-color: transparent;
+    }     
+    
+    .Logo-ul li {
+        padding: 0.8rem 0.4rem;
+        font-size: 1rem;
+        /* border: 1.5px solid red; */
+        }    
+}
+@media (min-width: 640px) {
+    .Nav-box{
+       
+        width: 100%;
+    }
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size:1rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid rgb(252, 0, 0);
+        background-color: transparent;
+    }
+        
+    
+    .Logo-ul li {
+        padding: 0.8rem 0.4rem;
+        font-size: 1rem;
+        
+        /* border: 1.5px solid red; */
+        }
+}
+
+@media (min-width: 768px) {
+    .Nav-box{
+      
+        width: 100%;
+    }
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size:1.2rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid rgb(252, 0, 0);
+        background-color: transparent;
+    }
+        
+    
+    .Logo-ul li {
+        padding: 0.8rem 0.6rem;
+        font-size: 1.1rem;
+        
+        /* border: 1.5px solid red; */
+        }
+}
+
+@media (min-width: 1024px) {
+    .Nav-box{
+        
+        width: 100%;
+    }
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size:1.2rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid rgb(252, 0, 0);
+        background-color: transparent;
+    }
+        
+    
+    .Logo-ul li {
+        padding: 0.8rem 0.6rem;
+        font-size: 1.1rem;
+        
+        /* border: 1.5px solid red; */
+        }
+
+}
+
+@media (min-width: 1280px) {
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size:1.2rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid rgb(252, 0, 0);
+        background-color: transparent;
+    }
+        
+    
+    .Logo-ul li {
+        padding: 0.8rem 0.6rem;
+        font-size: 1.1rem;
+        
+        /* border: 1.5px solid red; */
+        }
+
+}
+
+@media (min-width: 1536px) {
+    
+    .Logo-text{
+        padding: 0.3rem 0.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        border: 1.5px solid red;
+        background-color: transparent;
+    }
+    
+    
+    .Logo-ul li {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    /* border: 1.5px solid red; */
+    }
+    
+    .Logo-ul li  a{
+        text-decoration: none;
+        color: rgb(156, 155, 155);
+        transition: 1s;
+    }
+    .Logo-ul li a:hover{
+    
+        color: rgb(85, 85, 85);
+    }
+}
