@@ -49,7 +49,7 @@ return filterItems
   function getTopRatedcards(allRestaurant) {
     // console.log(allRestaurant,"00")
     const topRated = allRestaurant?.filter(
-      (cards) => cards?.data?.data?.avgRating > 3.7
+      (cards) => cards?.data?.data?.avgRating > 3.7 
     );
     return topRated;
   }
