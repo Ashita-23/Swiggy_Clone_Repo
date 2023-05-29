@@ -8,6 +8,7 @@ import RestaurantCounter from "./src/BodyComponents/CounterComponents/CardsCount
 import Footer from "./src/FooterComponents/Footer"
 import ErrorInSearch from "./src/ErrorCompos/Errors"
 import MenuCounter from "./src/BodyComponents/MenuComponents/MenuCounter"
+import About from "./src/BodyComponents/AboutComponents/About"
 import Carts from "./src/BodyComponents/CartComponents/Cart"
 import { Provider } from "react-redux"
 import FoodStore from "./src/Util/FoodStore"
@@ -37,6 +38,12 @@ const AppRouting = createBrowserRouter([
             {
                 path:"/" ,
                 element :  <Home/>  ,
+                errorElement : <ErrorInSearch/>
+
+            },
+            {
+                path:"/about" ,
+                element :  <About/>  ,
                 errorElement : <ErrorInSearch/>
 
             },
