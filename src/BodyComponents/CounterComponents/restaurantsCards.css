@@ -81,12 +81,12 @@ text-transform: capitalize;
 
 .time-box {
     font-size: 0.9rem;
-    color: rgb(187, 187, 187);
+    color: rgb(172, 170, 170);
 }
 
 .Price-box {
     font-size: 0.9rem;
-    color: rgb(187, 187, 187);
+    color: rgb(170, 169, 169);
 }
 
 .offer-and-view-box{
@@ -111,12 +111,13 @@ text-transform: capitalize;
     font-size: 1.1rem;
     font-weight: 400;
     border-top: 1px solid transparent;
-
+    color: rgb(134, 132, 132);
     /* border: 1px solid red; */
-    color: rgb(5, 120, 228);
+ 
     /* transition: 1s; */
 }
 .card-view-btn:hover{
-    color: rgb(134, 132, 132);
-    border-top: 1px solid gray;
+  color: rgb(5, 120, 228);
+
+    /* border-top: 1px solid gray; */
 }
