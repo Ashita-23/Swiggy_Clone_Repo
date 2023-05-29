@@ -1,10 +1,18 @@
 
-import { useState } from "react"
+
+import {  useDispatch } from "react-redux"
 import "./menuCards.css"
+import { addItem } from "../../Util/CartSlice"
+
+
 const MenuCards = ({menuLists})=>{
     // console.log(menuLists,"cards")
 
-   
+const dispatch = useDispatch();
+
+   const  addItemHandler =  (iterms)=>{
+    dispatch(addItem(iterms));
+   }
 
 
     return(<>
@@ -22,7 +30,7 @@ const MenuCards = ({menuLists})=>{
            </div>
            <div className="menuCards-btn-img">
             <figure className="add-to-cart-img"></figure>
-            <button className="add-to-cart-btn">Add</button>
+            <button className="add-to-cart-btn" onClick={()=>addItemHandler(menuLists?.card?.info)}>Add</button>
            </div>
         </div>
     </>)
