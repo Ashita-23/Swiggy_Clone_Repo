@@ -5,7 +5,7 @@ import Swigyy from  "../Assets/Home_Assets/Swigyy.gif"
 import Home_Cards from "./homeCards";
 
 const Home = () => {
-    console.log(Home_Config)
+    // console.log(Home_Config)
   return (
     <>
       <div className="home-outer">
@@ -32,6 +32,7 @@ const Home = () => {
         })
         }
         </div>
+       
       </div>
     </>
   );

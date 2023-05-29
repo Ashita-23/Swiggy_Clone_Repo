@@ -47,7 +47,7 @@ justify-content: space-around;
     word-spacing: 1px;
 }
 .home-btn{
-    color: red;
+    /* color: red; */
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
     border: 1px solid  red;
@@ -56,8 +56,18 @@ justify-content: space-around;
     letter-spacing: 1px;
     transition: 1s;
 }
-.home-btn:hover{
-    color: white;
+.home-btn a{
+    color: red;
+    text-decoration: none;
+    transition: 1s;
+
+}
+.home-btn a:hover{
+    color: rgb(253, 252, 252);
+ 
+}
+.home-btn:hover {
+    /* color: white; */
     /* padding: 0.5rem 1rem; */
     /* font-size: 1.2rem; */
     /* border: 1px solid  red; */
