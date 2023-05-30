@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom"
-import "./cardsCounter.css";
+import "./CardsCounter.css";
+import "./CardsCounterMedia.css";
 import RestaurantsCards from "./RestaurantsCards";
 import { Swiggy_API_URL } from "../../Util/ApiConfig";
-import ErrorInSearch from "../../ErrorCompos/Errors";
+import {getFilterList,getFastDelivery,getTopRatedcards} from "../../helper/HelperFunction"
+// import ErrorInSearch from "../../ErrorCompos/Errors";
 import CounterShimmer from "../ShimmerComponents/CounterShimmer";
 import CardsShimmer from "../ShimmerComponents/CardsShimmer";
 
@@ -13,9 +15,7 @@ const RestaurantCounter = () => {
   const [resturantList, setResturantList] = useState([]);
   //  console.log(resturantList,"copy")
   const [inputText, setInputText] = useState(" ");
-  const [inputError,setInputError] = useState(false)
 
-  
 
   useEffect(() => {
     getSwiggyData();
@@ -28,35 +28,8 @@ const RestaurantCounter = () => {
     setAllRestaurant(JsonData?.data?.cards);
     setResturantList(JsonData?.data?.cards);
   }
-
-
-  function getFilterList(inputText,allRestaurant){
-    console.log(inputText,"inputText")
-    // console.log(allRestaurant,"ARL")
-  const filterItems = allRestaurant.filter((Restaurants)=>Restaurants?.data?.data?.name?.toLowerCase().includes(inputText.toLowerCase())) ;
-  console.log(filterItems)
-return filterItems
-}
-
-  function getFastDelivery(allRestaurant) {
-    console.log(allRestaurant);
-    const fastDelivery = allRestaurant.filter(
-      (cards) => cards?.data?.data?.deliveryTime < 40
-    );
-    return fastDelivery;
-  }
-
-  function getTopRatedcards(allRestaurant) {
-    // console.log(allRestaurant,"00")
-    const topRated = allRestaurant?.filter(
-      (cards) => cards?.data?.data?.avgRating > 3.7 
-    );
-    return topRated;
-  }
-
-
+//early return
   if(!allRestaurant) return null;
-
   return  (resturantList.length===0) ? <CounterShimmer/> : (
     <>
       <div className="Counter-outer">
@@ -89,19 +62,15 @@ return filterItems
               className="btn"
               onClick={() => {
                 const topRatedCards = getTopRatedcards(allRestaurant);
-                ( topRatedCards.length === 0)? setResturantList(allRestaurant): setResturantList(topRatedCards); }}
-            >
+                ( topRatedCards.length === 0)? setResturantList(allRestaurant): setResturantList(topRatedCards); }}>
               Top Rating
             </button>
           </div>
         </div>
         <div className="card-display-outer">
-        {/* <div className={!inputError ? "Errorhidden" : " Errorhidden Errorshow"}><ErrorInSearch/></div> */}
         <div className="card-display-inner">
-
-        {
-          resturantList?.map((cards)=>{
-            return resturantList.length === 0 ?  ( <CardsShimmer/> ) : ( <Link to={"/restaurant/"+ cards?.data?.data?.id} ><RestaurantsCards resturantLists={cards} key={cards?.data?.data?.id}/> </Link>);
+        {resturantList?.map((cards)=>{
+            return resturantList.length === 0 ? ( <CardsShimmer/> ) : ( <Link to={"/restaurant/"+ cards?.data?.data?.id} ><RestaurantsCards resturantLists={cards} key={cards?.data?.data?.id}/> </Link>);
           })}
 
         </div>
