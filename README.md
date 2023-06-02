@@ -21,4 +21,6 @@ Things that I had used in this swiggy clone app are as follow.
 9-- Parcel -- as a bundler for my project .
 
 10 -- Swigyy API 
+
+##Featurs that I had added in this project
  
