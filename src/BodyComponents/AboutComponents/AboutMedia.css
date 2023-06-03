@@ -1,0 +1,223 @@
+
+
+
+@media (min-width: 240px) {
+}
+@media (min-width: 375px) {
+
+        .about-inner{
+        /* border: 1px solid red; */
+        border: 1px solid gainsboro;
+        width: 80vw;
+        padding: 0.5rem;
+        }
+        
+        .about-heading{
+        /* border: 1px solid red; */
+
+        font-size: 1.5rem;
+        font-weight: 500;
+      
+        padding: 1rem 0.2rem;
+        }
+        .about-text{
+        /* border: 1px solid red; */
+             text-align: justify;
+             white-space:wrap;
+             /* word-spacing: px; */
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(158, 158, 158);
+            word-spacing: -2px;
+            padding: 0.2rem 0.5rem;
+        }
+        span{
+        /* border: 1px solid red; */
+            color: rgb(54, 53, 53);
+            font-weight: 600;
+        }
+}
+@media (min-width: 640px) {
+    
+    .about-inner{
+        /* border: 1px solid red; */
+        border: 1px solid gainsboro;
+
+        width: 80vw;
+        padding: 0.2rem;
+        }
+        
+        .about-heading{
+        /* border: 1px solid red; */
+
+        font-size: 1.5rem;
+        font-weight: 500;
+      
+        padding: 1rem 0.2rem;
+        }
+        .about-text{
+        /* border: 1px solid red; */
+             text-align: justify;
+             white-space:wrap;
+             /* word-spacing: px; */
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(158, 158, 158);
+            word-spacing: -2px;
+            padding: 0.2rem 0.5rem;
+        }
+        span{
+        /* border: 1px solid red; */
+            color: rgb(54, 53, 53);
+            font-weight: 600;
+        }
+}
+
+@media (min-width: 768px) {
+    .about-inner{
+        /* border: 1px solid red; */
+        border: 1px solid gainsboro;
+
+        width: 80vw;
+        padding: 0.2rem;
+        }
+        
+        .about-heading{
+        /* border: 1px solid red; */
+
+        font-size: 1.8rem;
+        font-weight: 500;
+      
+        padding: 1rem 0.2rem;
+        }
+        .about-text{
+        /* border: 1px solid red; */
+             text-align: justify;
+             white-space:wrap;
+             /* word-spacing: px; */
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(158, 158, 158);
+            word-spacing: -2px;
+            padding: 0.2rem 0.5rem;
+        }
+        span{
+        /* border: 1px solid red; */
+            color: rgb(54, 53, 53);
+            font-weight: 600;
+        }
+}
+
+@media (min-width: 1024px) {
+    .about-inner{
+        /* border: 1px solid red; */
+        border: 1px solid gainsboro;
+
+        width: 70vw;
+        padding: 0.2rem;
+        }
+        
+        .about-heading{
+        /* border: 1px solid red; */
+
+        font-size: 1.8rem;
+        font-weight: 500;
+      
+        padding: 1rem 0.2rem;
+        }
+        .about-text{
+        /* border: 1px solid red; */
+             text-align: justify;
+             white-space:wrap;
+             /* word-spacing: px; */
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(158, 158, 158);
+            word-spacing: -2px;
+            padding: 0.2rem 0.5rem;
+        }
+        span{
+        /* border: 1px solid red; */
+            color: rgb(54, 53, 53);
+            font-weight: 600;
+        }
+}
+
+@media (min-width: 1280px) {
+    .about-inner{
+        /* border: 1px solid red; */
+        border: 1px solid gainsboro;
+
+        width: 70vw;
+        padding: 0.2rem;
+        }
+        
+        .about-heading{
+        /* border: 1px solid red; */
+
+        font-size: 1.8rem;
+        font-weight: 500;
+      
+        padding: 1rem 0.2rem;
+        }
+        .about-text{
+        /* border: 1px solid red; */
+             text-align: justify;
+             white-space:wrap;
+             /* word-spacing: px; */
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(158, 158, 158);
+            word-spacing: -2px;
+            padding: 0.2rem 0.5rem;
+        }
+        span{
+        /* border: 1px solid red; */
+            color: rgb(54, 53, 53);
+            font-weight: 600;
+        }
+}
+
+@media (min-width: 1536px) {
+
+    
+.about-outer{
+    height: auto;
+    min-height: 95vh;
+    width: 99vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    
+    }
+    
+    .about-inner{
+    /* border: 1px solid red; */
+    height: auto;
+    /* min-height: 80vh; */
+    width: 70vw;
+    padding: 1rem;
+    }
+    
+    .about-heading{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    word-spacing: 1px;
+    padding: 1rem 0rem;
+    }
+    .about-text{
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(158, 158, 158);
+        word-spacing: 1px;
+        padding: 0.2rem 1rem;
+    }
+    
+    span{
+        color: rgb(54, 53, 53);
+        font-weight: 600;
+    }
+}
