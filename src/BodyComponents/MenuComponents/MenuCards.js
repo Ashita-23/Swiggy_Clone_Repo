@@ -1,7 +1,8 @@
 
 
 import {  useDispatch } from "react-redux"
-import "./menuCards.css"
+import "./MenuCards.css"
+import "./MenuCardsMedia.css"
 import { addItem } from "../../Util/CartSlice"
 
 
@@ -13,7 +14,6 @@ const dispatch = useDispatch();
    const  addItemHandler =  (iterms)=>{
     dispatch(addItem(iterms));
    }
-
 
     return(<>
         <div className="menuCard-outer">
