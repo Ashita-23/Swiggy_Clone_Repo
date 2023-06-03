@@ -1,9 +1,8 @@
 
-
-
 .footer-outer{
 /* border: 1px solid red; */
-height: 4rem;
+height: 3.5rem;
+width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -39,4 +38,12 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
     padding: 0.2rem 0.5rem;
     font-size: 1.3rem;
     color: gray;
+}
+.Sociel-sicons span i:hover {
+  
+    color: rgb(247, 4, 4);
+}
+.icone-box{
+    /* border: 1px solid red; */
+   
 }
