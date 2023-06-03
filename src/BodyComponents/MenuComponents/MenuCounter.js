@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import {useParams} from "react-router-dom"
-import "./menuCounter.css"
+import "./MenuCounter.css"
+import "./MenuCounterMedia.css"
 import MenuCards from "./MenuCards"
 import CounterShimmer from "../ShimmerComponents/CounterShimmer"
 import CardsShimmer from "../ShimmerComponents/CardsShimmer"
