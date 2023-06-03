@@ -1,6 +1,6 @@
 
 .home-outer{
-height: 150vh;
+height: auto;
 width: 99vw;
 /* border: 1px solid red; */
 display: flex;
@@ -8,12 +8,16 @@ flex-direction: column;
 flex-wrap: nowrap;
 align-items: center;
 justify-content: space-evenly;
+background-color: rgb(241, 241, 241);
 /* padding: 1rem 0rem; */
 }
 
 .home-intro-box{
+    background-color: white;
     height:50vh;
 width: 70vw;
+margin-top: 5rem;
+margin-bottom: 6rem;
 /* border: 1px solid rgb(19, 7, 7); */
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 display: flex;
@@ -26,6 +30,7 @@ justify-content: space-around;
 .home-intro-text{
     height:25vh;
     width: 35vw;
+    /* padding: 0.4rem 0rem; */
     /* border: 1px solid rgb(221, 113, 113); */
 display: flex;
 flex-direction: column;
@@ -41,6 +46,12 @@ justify-content: space-around;
     letter-spacing: 1px;
 }
 
+.title-tag{
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.3rem 0rem;
+    color: rgb(253, 62, 62);
+}
 .title{
     color: gray;
     font-size: 1.1rem;
@@ -90,6 +101,9 @@ justify-content: space-around;
 
 /* hone Cards css */
 .home-Cards-box{
+    background-color: white;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
     height:40vh;
     width: 70vw;
     /* border: 1px solid rgb(80, 2, 2);  */

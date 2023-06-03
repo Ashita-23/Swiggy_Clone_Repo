@@ -1,4 +1,5 @@
-import "./homeCards.css"
+import "./HomeCards.css"
+import "./HomeCardsMedia.css"
 
 const Home_Cards = ({HomeCards})=>{
     // console.log(HomeCards , "...")
