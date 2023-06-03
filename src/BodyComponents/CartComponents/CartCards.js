@@ -2,6 +2,7 @@
 import { useDispatch } from "react-redux"
 import { removeItem } from "../../Util/CartSlice"
 import "./CartCards.css"
+import "./CartCardsMedia.css"
 const CartCards = ({items})=>{
 console.log(items,"showcarts ")
 
