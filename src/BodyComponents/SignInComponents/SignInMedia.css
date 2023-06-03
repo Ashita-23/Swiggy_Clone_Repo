@@ -1,0 +1,376 @@
+
+@media (min-width:280px) {
+}
+
+@media (min-width:375px) {
+    .singin-outer{
+        height: 95vh;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    
+    .singin-inner{
+        height: 45vh;
+        width: 90vw;
+        /* border: 1px solid red; */
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        font-family: 1.5rem;
+      
+    }
+    
+    form{
+        height:42vh;
+        width: 80vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.1rem 0rem;
+  
+    }
+    
+    
+    
+    label{
+        font-size: 1rem;
+        padding: 0.2rem ;
+        /* border: 1px solid red; */
+    }
+    
+    input{
+        font-size: 1rem;
+        padding: 0.5rem 0.2rem; 
+        /* border: 1px solid red; */
+    }
+    
+    
+    ::placeholder{
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .singin-outer{
+        height: 95vh;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    
+    .singin-inner{
+        height: 36vh;
+        width: 70vw;
+        /* border: 1px solid red; */
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        font-family: 1.5rem;
+      
+    }
+    
+    form{
+        height:25vh;
+        width: 60vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.1rem 0.2rem;
+  
+    }
+    
+    
+    
+    label{
+        font-size: 1.1rem;
+        padding: 0.2rem ;
+        /* border: 1px solid red; */
+    }
+    
+    input{
+        font-size: 1.1rem;
+        padding: 0.5rem 0.2rem; 
+        /* border: 1px solid red; */
+    }
+    
+    
+    ::placeholder{
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .singin-outer{
+        height: 95vh;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    
+    .singin-inner{
+        height: 40vh;
+        width: 70vw;
+        /* border: 1px solid red; */
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        font-family: 1.5rem;
+      
+    }
+    
+    form{
+        height:25vh;
+        width: 60vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.1rem 0.2rem;
+  
+    }
+    
+    
+    
+    label{
+        font-size: 1.1rem;
+        padding: 0.2rem ;
+        /* border: 1px solid red; */
+    }
+    
+    input{
+        font-size: 1.1rem;
+        padding: 0.5rem 0.2rem; 
+        /* border: 1px solid red; */
+    }
+    
+    
+    ::placeholder{
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .singin-outer{
+        height: 95vh;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    
+    .singin-inner{
+        height: 50vh;
+        width: 70vw;
+        /* border: 1px solid red; */
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        font-family: 1.5rem;
+      
+    }
+    
+    form{
+        height:25vh;
+        width: 60vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.1rem 0.2rem;
+  
+    }
+    
+    
+    
+    label{
+        font-size: 1.1rem;
+        padding: 0.2rem ;
+        /* border: 1px solid red; */
+    }
+    
+    input{
+        font-size: 1.1rem;
+        padding: 0.5rem 0.2rem; 
+        /* border: 1px solid red; */
+    }
+    
+    
+    ::placeholder{
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .singin-outer{
+        height: 95vh;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    
+    .singin-inner{
+        height: 50vh;
+        width: 50vw;
+        /* border: 1px solid red; */
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        font-family: 1.5rem;
+      
+    }
+    
+    form{
+        height:25vh;
+        width: 40vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.1rem 0.2rem;
+  
+    }
+    
+    
+    
+    label{
+        font-size: 1.1rem;
+        padding: 0.2rem ;
+        /* border: 1px solid red; */
+    }
+    
+    input{
+        font-size: 1.1rem;
+        padding: 0.5rem 0.2rem; 
+        /* border: 1px solid red; */
+    }
+    
+    
+    ::placeholder{
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .singin-outer{
+        height: 99vh;
+        width: 99vw;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .singin-inner{
+        height: 40vh;
+        width: 34vw;
+        /* border: 1px solid red; */
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+    }
+    
+    .form-heading{
+        /* border: 1px solid red; */
+        padding: 0.5rem 1rem;
+        font-family: 2rem;
+        font-weight: 500;
+        color: gray;
+    }
+    
+    form{
+        height:18vh;
+        width: 20vw;
+        /* border: 1px solid rgb(155, 20, 20); */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* align-items: center; */
+        justify-content: space-around;
+    
+    }
+    
+    
+    .form-boxs{
+        /* border: 1px solid red; */
+        margin:  0.1rem 0rem;
+        padding: 0.2rem 0rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* border-left: 1px solid gray; */
+        border-bottom: 1px solid rgb(187, 186, 186);
+    }
+    
+    
+    
+    label{
+        font-size: 1.1rem;
+        padding: 1rem ;
+        color: gray;
+    
+    }
+    
+    input{
+        font-size: 1rem;
+        outline: none;
+        padding: 0.5rem 0.6rem;
+        border: none;
+        background-color: transparent;
+    }
+    
+    
+    ::placeholder{
+        font-size: 1rem;
+        color: rgb(187, 187, 187);
+    }
+    
+    .submit-btn{
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.3rem 1rem;
+        outline: none;
+        border-radius: 10px;
+        border: 1.5px solid rgb(158, 156, 156);
+        color: rgb(165, 163, 163);
+        background-color: transparent;
+        transition: 1s;
+        margin: 0.4rem 1rem;
+    }
+    .submit-btn:hover{
+       
+        color: rgb(252, 251, 251);
+        background-color:  rgb(165, 163, 163);
+    }
+}
