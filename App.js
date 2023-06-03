@@ -10,6 +10,7 @@ import ErrorInSearch from "./src/ErrorCompos/Errors"
 import MenuCounter from "./src/BodyComponents/MenuComponents/MenuCounter"
 import About from "./src/BodyComponents/AboutComponents/About"
 import Carts from "./src/BodyComponents/CartComponents/Cart"
+import  SignIn  from "./src/BodyComponents/SignInComponents/SignIn"
 import { Provider } from "react-redux"
 import FoodStore from "./src/Util/FoodStore"
 
@@ -64,7 +65,15 @@ const AppRouting = createBrowserRouter([
                         element:<Carts/>,
                         errorElement : <ErrorInSearch/>,
 
-          }
+          },
+            {
+                        path:"/signIn",
+                        element:<SignIn/>,
+                        errorElement : <ErrorInSearch/>,
+
+          },
+
+
              
 
             
