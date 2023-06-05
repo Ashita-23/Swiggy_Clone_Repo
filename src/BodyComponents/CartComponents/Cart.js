@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { clearAll} from "../../Util/CartSlice"
+import { clearAll, addAll} from "../../Util/CartSlice"
 import "./Cart.css"
 import "./CartMedia.css"
 import CartCards from "./CartCards"
@@ -13,32 +13,40 @@ const  Carts = ()=>{
 
     const cartItems = useSelector((store) => store.cart.iterms)
 
-    const getCartItems = ()=>{
-      const localCartData = localStorage.getItem("cartIterms");
+    // const getCartItems = ()=>{
+    //    const localCartData = localStorage.getItem("cartIterms");
+    //    console.log(localCartData)
  
-      if(localCartData === []){
-       return []
-       } else {
-         return JSON.parse(localCartData)
-       }
-     }
+    //  }
   
 
-    const [Carts , setCarts] = useState(getCartItems())
+    const [Carts , setCarts] = useState(cartItems);
     console.log(Carts,"useStateList")
     // console.log(cartItems,"cart")
-    // setCarts(cartItems )
+
     
    useEffect(()=>{
-    setCarts(cartItems)
-   },[cartItems ])
+    // setCarts(cartItems)
+    const localCartData = localStorage.getItem("cartIterms");
+    if(localCartData !== '' && localCartData != '[]'){
+      console.log('Old Cart',JSON.parse(localCartData));
+      dispatch(addAll(JSON.parse(localCartData)))
+      setCarts(JSON.parse(localCartData));
+    }
+
+   },[])  
+
+
     useEffect(()=>{
-              localStorage.setItem("cartIterms",JSON.stringify(Carts))
+              if(Carts.length>0){
+                localStorage.setItem("cartIterms",JSON.stringify(Carts))
+              }
     },[Carts])
 
     const dispatch = useDispatch()
     const ClearAllCarts =()=>{
      dispatch(clearAll())
+     
     }
 
     return Carts.length === 0 ? <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food .....</h1></div>:
