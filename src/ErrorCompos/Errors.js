@@ -1,7 +1,11 @@
+import errorImage from "../Assets/Home_Assets/error.jpg"
+import "./Error.css"
+
 const ErrorInSearch = ()=>{
     return(<>
-        <div>
-            <h1>No reaturant matchs ..... try something different.</h1>
+        <div className="error-outer">
+        <img src={errorImage} alt="error" className="error-img" />
+            <h1 className="error-text">Some thing is wrong .</h1>
         </div>
     </>)
 }
