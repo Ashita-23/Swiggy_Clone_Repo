@@ -12,6 +12,8 @@ const MenuCards = ({menuLists})=>{
 const dispatch = useDispatch();
 
    const  addItemHandler =  (iterms)=>{
+    console.log(iterms);
+    const localData  =  localStorage.getItem('')
     dispatch(addItem(iterms));
    }
 
