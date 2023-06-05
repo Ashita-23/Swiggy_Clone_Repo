@@ -4,7 +4,7 @@ import { removeItem } from "../../Util/CartSlice"
 import "./CartCards.css"
 import "./CartCardsMedia.css"
 const CartCards = ({items})=>{
-console.log(items,"showcarts ")
+// console.log(items,"showcarts ")
 
 const dispatch = useDispatch()
 
