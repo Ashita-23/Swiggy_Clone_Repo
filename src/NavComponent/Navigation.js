@@ -13,7 +13,7 @@ const Navigation = ()=>{
    <nav className="Nav-box">
     <div className="Logo-box"><span className="Logo-text"><Link to="/restaurant">Foodies</Link></span></div>
     <ul className="Logo-ul">
-        <li><Link to="/">HOME</Link></li>
+        <li><Link to="/"></Link></li>
         <li><Link to="/about">ABOUT</Link></li>
         <li><Link to="/signIn">SING IN</Link></li>
         <li><Link to="/cart">CART {cartIterms.length}</Link></li>
