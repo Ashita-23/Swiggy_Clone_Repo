@@ -1,0 +1,21 @@
+
+
+.error-outer{
+    height: 99vh;
+    width: 99vw;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-img{
+    height:30rem;
+    width: 40rem;
+}
+
+.error-text{
+
+}
