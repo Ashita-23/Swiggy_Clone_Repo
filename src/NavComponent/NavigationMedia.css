@@ -1,4 +1,7 @@
-@media (min-width: 240px) {
+@media (min-width: 260px) {
+    .Logo-ul{
+        display: none;
+    }
 }
 @media (min-width: 375px) {
     .Nav-box{
@@ -66,11 +69,22 @@
         }
 }
 
+@media (min-width: 964px){
+    .Logo-ul{
+        display: flex;
+    }
+    .icone-ul-two{
+        display: none;
+        
+    }
+}
+
 @media (min-width: 1024px) {
     .Nav-box{
         
         width: 100%;
     }
+   
     .Logo-text{
         padding: 0.3rem 0.5rem;
         font-size:1.2rem;
@@ -80,15 +94,16 @@
         background-color: transparent;
     }
         
-    
+   
     .Logo-ul li {
         padding: 0.8rem 0.6rem;
         font-size: 1.1rem;
         
         /* border: 1.5px solid red; */
         }
-
+     
 }
+
 
 @media (min-width: 1280px) {
     .Logo-text{
