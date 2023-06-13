@@ -23,4 +23,34 @@ Things that I had used in this swiggy clone app are as follow.
 10 -- Swigyy API 
 
 ##Featurs that I had added in this project
+1-- Search bar 
+
+2-- Filter buttons -- Button
+
+   1-- Filter heigh rating resturant cards
+   
+   2-- Filter fast delivery resturant cards 
+   
+   3-- Reset resurant cards
+   
+   4-- Add to cart  
+   
+   5-- Remove from cart
+   
+   6-- Clear all 
+
+ 3-- Store data in localStorage 
+
+4-- Get from locatStorage in Card Slice (Redux)
+
+5-- Shimmer Effects for 
+   1-- Resturant 
+   
+   2-- Menu 
+   
+6-- Error Pages
+
+7-- Empty cart Effect 
+   
+   
  
