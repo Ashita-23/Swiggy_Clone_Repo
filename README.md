@@ -23,6 +23,7 @@ Things that I had used in this swiggy clone app are as follow.
 10 -- Swigyy API 
 
 ##Featurs that I had added in this project
+
 1-- Search bar 
 
 2-- Filter buttons -- Button
@@ -44,6 +45,7 @@ Things that I had used in this swiggy clone app are as follow.
 4-- Get from locatStorage in Card Slice (Redux)
 
 5-- Shimmer Effects for 
+
    1-- Resturant 
    
    2-- Menu 
