@@ -28,17 +28,17 @@ Things that I had used in this swiggy clone app are as follow.
 
 2-- Filter buttons -- Button
 
-   1-- Filter heigh rating resturant cards
+   i-- Filter heigh rating resturant cards
    
-   2-- Filter fast delivery resturant cards 
+   ii-- Filter fast delivery resturant cards 
    
-   3-- Reset resurant cards
+   iii-- Reset resurant cards
    
-   4-- Add to cart  
+   iv-- Add to cart  
    
-   5-- Remove from cart
+   v-- Remove from cart
    
-   6-- Clear all 
+   vi-- Clear all 
 
  3-- Store data in localStorage 
 
@@ -46,9 +46,9 @@ Things that I had used in this swiggy clone app are as follow.
 
 5-- Shimmer Effects for 
 
-   1-- Resturant 
+   i-- Resturant 
    
-   2-- Menu 
+   ii-- Menu 
    
 6-- Error Pages
 
