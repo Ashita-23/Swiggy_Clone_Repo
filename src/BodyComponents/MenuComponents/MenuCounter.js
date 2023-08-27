@@ -13,9 +13,11 @@ const MenuCounter = () => {
   // console.log(restaurantId);
 
   const [menu, setMenu] = useState([]);
-  const [filterMenu, setFilterMenu] = useState([]);
+  const [filterMenu, setFilterMenu] = useState([]);   //make it more simple while optimizing our app
   const [menuHeader, setMenuHeader] = useState([]);
   const [menuOffers, setMenuOffers] = useState([]);
+  const [accordion, setAccordion] = useState(false);
+
   // console.log(menu, "menu  ");
   // console.log(filterMenu, "filterMenu ");
   // console.log(menuHeader,"MenuHeader ")
@@ -69,13 +71,16 @@ const MenuCounter = () => {
             return (
               <>
                 <div className="menuCardsContanor">
-                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}<button><i className="fa-solid fa-angle-up"></i></button><button><i className="fa-solid fa-angle-down"></i></button></div>
-                  {menuLists.card.card.itemCards.map((menuItems) => (
+                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}<button onClick={setAccordion(true)}><i className="fa-solid fa-angle-up"></i></button><button onClick={setAccordion(false)}><i className="fa-solid fa-angle-down"></i></button></div>
+                {accordion  && <div>              
+                      {menuLists?.card?.card?.itemCards.map((menuItems) => (
                     <MenuCards
                       menuItems={menuItems}
                       key={menuItems?.card?.info?.id}
                     ></MenuCards>
                   ))}
+                  </div>}
+
                 </div>
               </>
             );
