@@ -4,13 +4,15 @@ import "./Navigation.css"
 import "./NavigationMedia.css"
 import UserOnlineStatus from "../helper/UserOnlineStatus"
 import {useSelector} from "react-redux"
+import OnOffPopUp from "../BodyComponents/OnlinePopup/Onoff"
 
 
 const Navigation = ()=>{
-    const  cartIterms = useSelector((Store)=>Store.cart.iterms)
-    // console.log(cartIterms,"storelog")
+    const  cartItems = useSelector((Store)=>Store.cart.items)
+    const  favItems = useSelector((Store)=>Store.favItem.items)
+    // console.log(cartItems,"storelog")
 const IsOnline = UserOnlineStatus()
-if(!IsOnline) return alert("your internet conection is gone!")
+if(!IsOnline) return <OnOffPopUp></OnOffPopUp>
     return(<>
    <nav className="Nav-box">
     <div className="Logo-box"><span className="Logo-text"><Link to="/restaurant">Foodies</Link></span></div>
@@ -18,13 +20,15 @@ if(!IsOnline) return alert("your internet conection is gone!")
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">ABOUT</Link></li>
         <li><Link to="/signIn">SING IN</Link></li>
-        <li><Link to="/cart">CART {cartIterms.length}</Link></li>
+        <li><Link to="/cart"><i className="fa-solid fa-cart-shopping"></i>{cartItems.length}</Link></li>
+        <li><Link to="/favorite"><i className="fa-solid fa-heart"></i></Link></li>
     </ul>
     <ul className="icone-ul-two">
-        <li><Link to="/"><i class="fa-solid fa-house"></i></Link></li>
-        <li><Link  to="/about"><i class="fa-solid fa-circle-exclamation"></i></Link></li>
-        <li><Link to="/signIn"><i class="fa-solid fa-circle-user"></i></Link></li>
-        <li><Link to="/cart"><i class="fa-solid fa-cart-shopping"></i></Link></li>
+        <li><Link to="/"><i className="fa-solid fa-house"></i></Link></li>
+        <li><Link  to="/about"><i className="fa-solid fa-circle-exclamation"></i></Link></li>
+        <li><Link to="/signIn"><i className="fa-solid fa-circle-user"></i></Link></li>
+        <li><Link to="/cart"><i className="fa-solid fa-cart-shopping"></i>{cartItems.length}</Link></li>
+        <li><Link to="/favorite" ><i className="fa-solid fa-heart"></i></Link></li>
     </ul>
    </nav>
     </>)

@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit"
 import CartSlice from "./CartSlice"
+import FavSlice from "./FavSlice"
   
 const FoodStore = configureStore({
   reducer : {
-    cart : CartSlice,
+    cart: CartSlice,
+    favItem:FavSlice,
   }
 })
 

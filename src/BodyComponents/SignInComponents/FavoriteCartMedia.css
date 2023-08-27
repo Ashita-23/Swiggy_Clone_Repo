@@ -1,7 +1,6 @@
 
-
 @media (min-width:260px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 100%;
         /* border:1px solid red; */
@@ -15,7 +14,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 100%;
@@ -31,15 +30,15 @@
     font-size: 1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size: 0.9rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -47,7 +46,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -58,7 +57,7 @@
 }
 
 @media (min-width:320px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 100%;
         /* border:1px solid red; */
@@ -72,7 +71,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 100%;
@@ -88,15 +87,15 @@
     font-size: 1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size: 0.9rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -104,7 +103,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -114,7 +113,7 @@
 }
 
 @media (min-width:450px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 100%;
         /* border:1px solid red; */
@@ -128,7 +127,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -144,16 +143,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -161,7 +160,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -171,7 +170,7 @@
 }
 
 @media (min-width: 481px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 100%;
         /* border:1px solid red; */
@@ -185,7 +184,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -201,16 +200,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -218,7 +217,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -227,7 +226,7 @@
 }
 }
 @media (min-width: 500px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 86%;
         /* border:1px solid red; */
@@ -241,7 +240,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -257,16 +256,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -274,7 +273,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -283,7 +282,7 @@
 }
 }
 @media (min-width: 769px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 86%;
         /* border:1px solid red; */
@@ -297,7 +296,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -313,16 +312,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -330,7 +329,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -339,7 +338,7 @@
 }
 }
 @media (min-width: 1025px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 70%;
         /* border:1px solid red; */
@@ -353,7 +352,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -369,16 +368,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -386,7 +385,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -395,7 +394,7 @@
 }
 }
 @media (min-width: 1201px) {
-    .cartCard-outer{
+   .favCard-outer{
         height: auto;
         width: 60%;
         /* border:1px solid red; */
@@ -409,7 +408,7 @@
         margin: 0.5rem 0;
     }
     
-    .cartCards-details{
+   .favCard-details{
         /* border: 1px solid red; */
         padding: 0.5rem;
         width: 60%;
@@ -425,16 +424,16 @@
     font-size: 1.1rem;
 }
 
-.cart-name{
+.favCard-name{
     font-size:1rem; 
 }
 
-.cart-rating{
+.favCard-rating{
     margin: 0.3rem 0.3rem ;
     padding: 0.2rem 0.4rem;
     font-weight:400;
 }
-.cart-price{
+.favCard-price{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;
@@ -442,7 +441,7 @@
     color: rgb(66, 66, 66);
 }
 
-.cart-inStock{
+.favCard-inStock{
     margin: 0.3rem 0.2rem ;
     padding: 0.2rem;
     font-size: 0.9rem;

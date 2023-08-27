@@ -41,7 +41,7 @@ const Home = () => {
         <div className="home-Cards-box">
           {/* <h1>Click On Order Now to view our </h1> */}
           {Home_Config.map((Cards) => {
-            return (<Link to={"/restaurant"}><Home_Cards HomeCards={Cards} /></Link>);
+            return (<Link to={"/restaurant"} key={Cards.id}><Home_Cards HomeCards={Cards} /></Link>);
           })}
         </div>
       </div>

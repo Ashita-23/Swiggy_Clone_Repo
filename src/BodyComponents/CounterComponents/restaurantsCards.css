@@ -121,3 +121,13 @@ text-transform: capitalize;
 
     /* border-top: 1px solid gray; */
 }
+
+.promotedText{
+  position: absolute;
+  /* border: 1px solid red; */
+  margin-top: 2.4rem;
+  margin-left: 2rem;
+  background-color: #fd4011;
+  color: white;
+  padding: 0.2rem 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.418) 0px 3px 8px; }

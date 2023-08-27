@@ -1,49 +1,122 @@
 
 .footer-outer{
 /* border: 1px solid red; */
-height: 3.5rem;
+height: auto;
 width: 100%;
 display: flex;
-flex-direction: row;
+flex-wrap: wrap;
+flex-direction:column;
 align-items: center;
-justify-content: center;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+border: 1px solid red;
+
+/* justify-content: center; */
+/* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
 }
 
-.Sociel-sicons{
+a{
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+    transition: 1s;
+}
+
+a:hover{
+    
+    color: rgb(117, 115, 115);
+}
+
+.cuisineInfo{
+    border: 1px solid blue;
+    height: auto;
+    width: 100%;
+    display: flex;
+flex-wrap: wrap;
+flex-direction:column;
+align-items: center;
+justify-content: center;
+}
+
+
+.cuisineCardOuter{
+    height: auto;
+    width: 96%;
+    display: flex;
+flex-wrap: wrap;
+flex-direction:row;
+align-items: center;
+justify-content: space-evenly;
+border: 1px solid rgb(157, 157, 243);
+
+}
+
+.cuisineText{
     /* border: 1px solid red; */
-    padding: 0.5rem;
-    /* height: 3rem;
-  
-    justify-content: center; */
-    align-items: center;
+    height: auto;
+    width: 90%;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0.5rem 1.1rem;
+}
+
+.cuisineCard{
+    width: 20%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    /* border: 1px solid rgb(196, 196, 196); */
+    border-radius: 12px ;
+    margin: 0.5rem 0.2rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.downloadInfo{
+    height: auto;
+width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background-color: rgb(241, 241, 241);
+}
+.textBox{
+    height: auto;
+    width: 30%;
+    /* border: 1px solid rgb(15, 15, 15); */
 }
 
-.Sociel-sicons span {
-    margin: 0rem 2rem;
-    padding: 0.2rem 2rem;
-    font-size: 1.2rem;
-
-}
-.Sociel-sicons span:first-child{
-    color: red;
-    font-weight: 600;
-    /* border: 1px solid red; */
+.infoText{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(85, 84, 84);
+    /* white-space: nowrap; */
+    
 }
 
-.Sociel-sicons span i {
-    padding: 0.2rem 0.5rem;
-    font-size: 1.3rem;
-    color: gray;
+.appImagebox{
+    height: 4rem;
+    width: 12rem;
+    margin: 0.5rem;
+    border: 1px solid rgb(15, 15, 15);
+    border-radius:  15px;
+    overflow: hidden;
 }
-.Sociel-sicons span i:hover {
-  
-    color: rgb(247, 4, 4);
-}
-.icone-box{
-    /* border: 1px solid red; */
-   
+
+.appImage{
+    height: 4rem;
+    width:100%;
+
 }

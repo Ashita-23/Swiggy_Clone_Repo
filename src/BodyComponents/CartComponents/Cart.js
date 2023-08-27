@@ -10,8 +10,8 @@ import { useEffect } from "react"
 
 
 const  Carts = ()=>{
-
-    const cartItems = useSelector((store) => store.cart.iterms)
+  const dispatch = useDispatch()
+    const cartItems = useSelector((store) => store.cart.items)
 
     // const getCartItems = ()=>{
     //    const localCartData = localStorage.getItem("cartIterms");
@@ -31,7 +31,7 @@ const  Carts = ()=>{
     if(localCartData !== '' && localCartData != '[]'){
       console.log('Old Cart',JSON.parse(localCartData));
       dispatch(addAll(JSON.parse(localCartData)))
-      setCarts(JSON.parse(localCartData));
+      // setCarts(JSON.parse(localCartData));
     }
 
    },[])  
@@ -43,14 +43,15 @@ const  Carts = ()=>{
               }
     },[Carts])
 
-    const dispatch = useDispatch()
+   
     const ClearAllCarts =()=>{
      dispatch(clearAll())
      
     }
+  
+    if(Carts.length === 0) <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food .....</h1></div>
 
-    return Carts.length === 0 ? <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food .....</h1></div>:
-    ( <div className="cart-outer">
+    return ( <div className="cart-outer">
         <div className="cart-heder">
         <span className="cart-count-btn">Cart Items {cartItems.length}</span>
         <span className="cart-count-btn"><button className="clear-cart-btn" onClick={()=>ClearAllCarts()}>Clear Cart</button></span>

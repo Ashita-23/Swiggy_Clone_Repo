@@ -1,6 +1,7 @@
 
 .home-outer{
 height: auto;
+min-height: 100vh;
 width: 99vw;
 /* border: 1px solid red; */
 display: flex;

@@ -1,15 +1,19 @@
     import { useState } from "react"
+    import { useSelector } from "react-redux"
 import "./SignIn.css"
     import "./SignInMedia.css"
-    import UserPofile from "./UserProfile"
+    // import UserPofile from "./UserProfile"
 
 const SignIn = ()=>{
+    const FavItems = useSelector((store)=>store.favItem.items)
+
+console.log(FavItems,"FIfromslice")
   const initialvalue = {userName:" " , userEmail: ""}
     const [form , setForm] = useState(initialvalue)
     const [formError , setFormError ] = useState({})
     // const [IsSubmit , setIsSumit] = useState(false)
-    console.log(form,"V")
-    console.log(formError , "FE")
+    // console.log(form,"V")
+    // console.log(formError , "FE")
 
     const OnChangeHandler = (e)=>{
         const {name,value}   = e.target ;
@@ -44,12 +48,12 @@ const formValidation = (value) =>{
                 <form action="" onSubmit={SubmitHandler}>
                 <div className="form-boxs">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter Your Name " name="userName" value={form.userName} onChange={(e)=>OnChangeHandler(e)}/>
+                    <input type="text"  name="userName" value={form.userName} onChange={(e)=>OnChangeHandler(e)}/>
                     </div>
                     <p>{formError.userName}</p>
                 <div className="form-boxs">
                     <label>Email </label>
-                    <input type="text"   placeholder="Enter Your Email " name="userEmail" value={form.userEmail} onChange={(e)=>OnChangeHandler(e)}/>
+                    <input type="text"   name="userEmail" value={form.userEmail} onChange={(e)=>OnChangeHandler(e)}/>
                     </div>
                     <p>{formError.userEmail}</p>
                     <div className="form-boxs">

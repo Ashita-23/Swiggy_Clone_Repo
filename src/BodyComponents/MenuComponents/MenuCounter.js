@@ -1,47 +1,89 @@
-import { useEffect, useState } from "react"
-import {useParams} from "react-router-dom"
-import "./MenuCounter.css"
-import "./MenuCounterMedia.css"
-import MenuCards from "./MenuCards"
-import CounterShimmer from "../ShimmerComponents/CounterShimmer"
-import CardsShimmer from "../ShimmerComponents/CardsShimmer"
-const MenuCounter = () =>{
-const restaurantId = useParams() ;
-// console.log(restaurantId)
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
+import "./MenuCounter.css";
+import "./MenuCounterMedia.css";
+import MenuHeader from "./MenuHeader";
+import MenuCards from "./MenuCards";
+import CounterShimmer from "../ShimmerComponents/CounterShimmer";
+import MenuOfferList from "./MenuOfferList";
+// import CardsShimmer from "../ShimmerComponents/CardsShimmer"
+const MenuCounter = () => {
+  const restaurantId = useParams();
+  // console.log(restaurantId);
 
+  const [menu, setMenu] = useState([]);
+  const [filterMenu, setFilterMenu] = useState([]);
+  const [menuHeader, setMenuHeader] = useState([]);
+  const [menuOffers, setMenuOffers] = useState([]);
+  // console.log(menu, "menu  ");
+  // console.log(filterMenu, "filterMenu ");
+  // console.log(menuHeader,"MenuHeader ")
+  // console.log(menuOffers,"menuOffers ")
 
+  useEffect(() => {
+    getMenuList();
+  }, []);
 
-    const [menu , setMenu] = useState([])
-    // console.log(menu,"menu  ")
+  async function getMenuList() {
+    const Swiggy_MENU_API_URL =
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.38704&lng=77.2821787&restaurantId=" +
+      restaurantId.id +
+      "&submitAction=ENTER";
+    const MenuList = await fetch(Swiggy_MENU_API_URL);
+    const Json = await MenuList.json();
+    // console.log(Json, "main Menu Data")
 
-    useEffect(()=>{
-        getMenuList()
-    },[])
+    setMenu(Json?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    setMenuHeader(Json?.data?.cards[0]?.card?.card?.info);
+    setMenuOffers(
+      Json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    );
+  }
 
-async function getMenuList(){
-        const Swiggy_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.38704&lng=77.2821787&restaurantId="+restaurantId.id+"&submitAction=ENTER";
-      const MenuList = await fetch(Swiggy_MENU_API_URL) ;
-      const Json = await MenuList.json()
-    //   console.log(Json, "main")
-    //   console.log(Json?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1] , "ccopy")
-      setMenu(Json?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1])
-    
-    }
+  useEffect(() => {
+    const filterMI = FilterMList(menu);
+    setFilterMenu(filterMI);
+  }, [menu]);
 
-    return (!menu) ? <CounterShimmer/> : (<>
-        <div className="menu-outer">
-            <h1 className="menu-heading">{menu?.card?.card?.title}</h1>
-            <div className="menu-inner">
-  { menu?.card?.card?.itemCards?.map((menuLists)=>{
-    {/* console.log(menu?.card?.card?.itemCards.length,"menuListslength") */}
+  function FilterMList(menu) {
+    // console.log(menu, "value");
+    const newList = menu?.filter((menu) => menu?.card?.card?.itemCards);
+    // console.log(newList, "NL");
+    return newList;
+  }
 
-    return menu?.card?.card?.itemCards.length===0 ? <CardsShimmer/>:(<MenuCards menuLists={menuLists}  key={menuLists?.card?.info?.id} ></MenuCards>)
-  })
-    }
-            </div>
+  return !menu ? (
+    <CounterShimmer />
+  ) : (
+    <>
+      <div className="menu-outer">
+        <MenuHeader menuHeader={menuHeader} />
+        {/* <MenuOfferList menuOffers={menuOffers} /> */}
+
+ 
+        <div className="menu-inner">
+          {filterMenu.map((menuLists) => {
+            {/* console.log(menuLists, "ML"); */}
+
+            return (
+              <>
+                <div className="menuCardsContanor">
+                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}<button><i className="fa-solid fa-angle-up"></i></button><button><i className="fa-solid fa-angle-down"></i></button></div>
+                  {menuLists.card.card.itemCards.map((menuItems) => (
+                    <MenuCards
+                      menuItems={menuItems}
+                      key={menuItems?.card?.info?.id}
+                    ></MenuCards>
+                  ))}
+                </div>
+              </>
+            );
+          })}
         </div>
-    </>)
-}
+      </div>
+    </>
+  );
+};
 
-export default MenuCounter
+export default MenuCounter;

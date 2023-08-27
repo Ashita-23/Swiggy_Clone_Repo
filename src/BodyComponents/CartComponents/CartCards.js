@@ -1,10 +1,11 @@
 
 import { useDispatch } from "react-redux"
 import { removeItem } from "../../Util/CartSlice"
+import {Swiggy_IMAGE_CDN_URL} from "./../../Util/ApiConfig"
 import "./CartCards.css"
 import "./CartCardsMedia.css"
 const CartCards = ({items})=>{
-// console.log(items,"showcarts ")
+console.log(items,"showcarts ")
 
 const dispatch = useDispatch()
 
@@ -26,11 +27,15 @@ const dispatch = useDispatch()
 
            </div>
            <div className="cartCards-btn-img">
-            <figure className="remove-from-cart-img"></figure>
+            <figure className="remove-from-cart-img"><img className="add-to-cart-img " src={Swiggy_IMAGE_CDN_URL+ items?.imageId} /></figure>
             <button className="remove-from-cart-btn" onClick={()=>removeItemHandler()}>Remove</button>
            </div>
         </div>
     </>)
 }
+
+
+
+
 
 export default CartCards
