@@ -71,15 +71,15 @@ const MenuCounter = () => {
             return (
               <>
                 <div className="menuCardsContanor">
-                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}<button onClick={setAccordion(true)}><i className="fa-solid fa-angle-up"></i></button><button onClick={setAccordion(false)}><i className="fa-solid fa-angle-down"></i></button></div>
-                {accordion  && <div>              
+                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}</div>
+                   
                       {menuLists?.card?.card?.itemCards.map((menuItems) => (
                     <MenuCards
                       menuItems={menuItems}
                       key={menuItems?.card?.info?.id}
                     ></MenuCards>
                   ))}
-                  </div>}
+                  
 
                 </div>
               </>
