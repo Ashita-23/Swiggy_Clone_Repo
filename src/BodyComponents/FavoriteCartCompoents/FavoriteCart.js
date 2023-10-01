@@ -24,10 +24,7 @@ console.log(allFavItems,"AFI")
 //     }else{
 //             setAllFavItems(FavItems)
 //         }
-//         //
-//         // 
-//         // 
-//         // 
+
 //         console.log(setToFavSlice.length
 //             ,"STFS")
 // },[])
@@ -54,7 +51,7 @@ const RemoveAll = ()=>{
 
 
  return(  <div className="fav_outer">
- <div className="fav_header"><button onClick={()=>RemoveAll()}>Clear All</button></div>
+ <div className="fav_header">Items {FavItems .length}<button className="fav_btn" onClick={()=>RemoveAll()}>Clear All</button></div>
                <div className="fav_inner">
 
     {allFavItems.map((items)=>(   <div className="favCard-outer" id={items?.id}>
