@@ -1,5 +1,5 @@
 .fav_outer{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: auto;
     min-height: 99vh;
     width: 99vw;
@@ -7,12 +7,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    /* padding: 0rem 2rem; */
 }
 
 .fav_header{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: auto;
-    width: 99vw;
+    width:70%;
+    padding: 1rem 2rem ;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    margin: 0rem 2rem;
+}
+
+.fav_btn{
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(252, 5, 5);
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.5rem 1.3rem;
+    margin-left: 1rem;
 }
 
 .fav_inner{
@@ -28,7 +46,7 @@
 .favCard-outer{
     height: auto;
     width: 60rem;
-    /* border:1px solid red; */
+    border:1px solid red;
     border-bottom: 1px solid rgb(194, 194, 194);
     padding: 1rem 1rem;
     display: flex;
@@ -129,6 +147,7 @@ border: 1px solid rgb(180, 180, 180);
 /* background-color: rgb(250, 250, 250); */
 border-radius: 12px;
 position: relative;
+/* overflow: hidden; */
 }
 
 .favCard-img{
