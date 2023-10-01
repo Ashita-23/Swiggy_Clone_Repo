@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import "./MenuCounter.css";
+import "./menuCounter.css";
 import "./MenuCounterMedia.css";
 import MenuHeader from "./MenuHeader";
 import MenuCards from "./MenuCards";
@@ -55,32 +55,40 @@ const MenuCounter = () => {
     return newList;
   }
 
+function AccordionHandler(){
+  if(accordion === false){
+    setAccordion(true)
+  }else if (accordion === true){
+    setAccordion(false)
+  }
+}
+
+
   return !menu ? (
     <CounterShimmer />
   ) : (
     <>
-      <div className="menu-outer">
+      <div className="menu-outer" key={"menu-outer"}>
         <MenuHeader menuHeader={menuHeader} />
         {/* <MenuOfferList menuOffers={menuOffers} /> */}
 
  
-        <div className="menu-inner">
+        <div className="menu-inner" key={"menu-inner"}>
           {filterMenu.map((menuLists) => {
             {/* console.log(menuLists, "ML"); */}
-
-            return (
+               {/* if(menuLists.length === null && 0 ) return  */}
+            return (!menuLists  ) ? <div>No menu is here ..................!</div> :  (
               <>
-                <div className="menuCardsContanor">
-                  <div className="accordion_header" >{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"}</div>
-                   
-                      {menuLists?.card?.card?.itemCards.map((menuItems) => (
-                    <MenuCards
-                      menuItems={menuItems}
-                      key={menuItems?.card?.info?.id}
-                    ></MenuCards>
-                  ))}
+                <div className="accordionContainor" key={menuLists?.card?.card?.itemCards?.card?.info?.id} >
+                  <div className="accordion_header" onClick={()=>AccordionHandler()} >
+                  <p>{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"} </p>
+                   <p>{!accordion ?<i className="fa-solid fa-chevron-down"></i>  :<i className="fa-solid fa-chevron-up"></i>}</p>
+                   </div>
+                { !accordion ? " " : <div className="accordionBody" >
+              
+                          {menuLists?.card?.card?.itemCards.map((menuItems) => (<MenuCards menuItems={menuItems} key={menuItems?.card?.info?.id}></MenuCards>) )}
+                  </div>}
                   
-
                 </div>
               </>
             );

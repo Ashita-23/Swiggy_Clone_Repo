@@ -18,9 +18,9 @@ const [addToFav , setAddToFav] = useState(false)
 const dispatch = useDispatch();
 
    const  addItemHandler =  (items)=>{
-    console.log(items);
-    const localData  =  localStorage.getItem('')
+    // console.log(items,"add items");
     dispatch(addItem(items));
+ 
    }
 function AddToFavFn(){
     if(addToFav === false){
