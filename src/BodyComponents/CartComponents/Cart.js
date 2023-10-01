@@ -12,12 +12,13 @@ import { useEffect } from "react"
 const  Carts = ()=>{
   const dispatch = useDispatch()
     const cartItems = useSelector((store) => store.cart.items)
+    console.log(cartItems," cartItems slice data")
 
   
 
     const [Carts , setCarts] = useState(cartItems);
-    // console.log(Carts,"useStateList")
-    console.log(Carts,"cart")
+    console.log(Carts,"Carts useStateList")
+
 
     
     useEffect(()=>{
@@ -27,11 +28,14 @@ const  Carts = ()=>{
    useEffect(()=>{
    
     const localCartData = localStorage.getItem("cartItems");
-    if(localCartData !== " "  && localCartData !='[]'){
-      console.log('Old Cart',JSON.parse(localCartData));
-      // dispatch(addAll(JSON.parse(localCartData)))
+    console.log(JSON.parse(localCartData),"getCartItem from localestorage")
+   
+    if(localCartData!==null && localCartData!== "[]" ){
+      // console.log('Old Cart',JSON.parse(localCartData));
+      dispatch(addAll(JSON.parse(localCartData)))
       // setCarts(JSON.parse(localCartData));
-    }},[])  
+    }
+  },[])  
 
 
 
@@ -39,8 +43,8 @@ const  Carts = ()=>{
               if(cartItems.length>0){
                 localStorage.setItem("cartItems",JSON.stringify(cartItems ))
               }
-    },[cartItems  ])
-    console.log(localStorage,"LS")
+    },[Carts ])
+    console.log(localStorage,"set data in localstorage")
    
     const ClearAllCarts =()=>{
      dispatch(clearAll())
