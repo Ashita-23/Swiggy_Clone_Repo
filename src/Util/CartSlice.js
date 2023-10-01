@@ -25,7 +25,7 @@ const  CartSlice = createSlice({
             state.items = []
         },
         addAll : (state, action)=>{
-            state.items =  state.items.action.payload
+           state.items.push(action.payload)
         },
         
     }
