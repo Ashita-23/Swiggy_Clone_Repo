@@ -12,8 +12,9 @@ reducers:{
   AddFavItem:(state, action) => {
     state.items.push(action.payload);
   },
-  ReFavItem:(state) => {
-    state.items.pop();
+  ReFavItem:(state,action) => {
+    const removeFav = action.payload 
+    state.items = state.items.filter((items)=>items.id !== removeFav)
   },
   AddAllFavItems:(state,action)=>{
     state.items.push(action.payload);

@@ -26,7 +26,7 @@ const Footer = () =>{
     // console.log(FooterJson?.data?.cards[5]?.card?.card?.brands ,"brands name")
     // console.log(FooterJson?.data?.cards[8]?.card?.card ,"download  info")
 
-    // setFooterData(FooterJson)
+    setFooterData(FooterJson)
   }
 
     return(<>
