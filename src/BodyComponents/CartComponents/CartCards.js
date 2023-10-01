@@ -5,17 +5,24 @@ import {Swiggy_IMAGE_CDN_URL} from "./../../Util/ApiConfig"
 import "./CartCards.css"
 import "./CartCardsMedia.css"
 const CartCards = ({items})=>{
-console.log(items,"showcarts ")
+
+// console.log(items,"showcarts ")
 
 const dispatch = useDispatch()
 
-    const removeItemHandler = ()=>{
-        dispatch(removeItem())
+    const removeItemHandler = (item) =>{
+        dispatch(removeItem(item))
+        // cartItems.slilce(item,1)
+        // localStorage.removeItem("cartItems")
     }
+
+  
+
+
     return(<>
           <div className="cartCard-outer" id={items?.id}>
            <div className="cartCards-details">
-           <span className={items?.itemAttribute.vegClassifier === "VEG" ? "veg" : "nonVeg"}><i className="fa-solid fa-utensils"></i></span>
+           {/* <span className={items?.itemAttribute.vegClassifier === "VEG" ? "veg" : "nonVeg"}><i className="fa-solid fa-utensils"></i></span> */}
            <span className="category">{items?.category}</span>
             <span className="cart-name">{items?.name}</span>
              {/* <span className="description">{menuLists?.card?.info?.description}</span> */}
@@ -28,7 +35,7 @@ const dispatch = useDispatch()
            </div>
            <div className="cartCards-btn-img">
             <figure className="remove-from-cart-img"><img className="add-to-cart-img " src={Swiggy_IMAGE_CDN_URL+ items?.imageId} /></figure>
-            <button className="remove-from-cart-btn" onClick={()=>removeItemHandler()}>Remove</button>
+            <button className="remove-from-cart-btn" onClick={()=>removeItemHandler(items?.id)}>Remove</button>
            </div>
         </div>
     </>)
