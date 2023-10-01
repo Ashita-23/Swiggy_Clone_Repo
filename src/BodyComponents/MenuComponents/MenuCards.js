@@ -31,7 +31,7 @@ function AddToFavFn(){
 }
 
    const AddToFav = (items)=>{
-    //    console.log(items,"ATFS")
+       console.log(items,"ATFS")
     dispatch(AddFavItem(items))
    }
 
@@ -52,7 +52,7 @@ function AddToFavFn(){
             <span className="menu-inStock">In Stock : { menuItems?.card?.info?.inStock || "--"}</span>
             {
                 !addToFav ? <button className= "menu-addTo-fav" onClick={()=>{AddToFav( menuItems?.card?.info);AddToFavFn()}} ><i className="fa-solid fa-heart"></i></button>:
-                <button className= "menu-addTo-fav menu-addedTo-fav" onClick={()=>{RemoveFav();AddToFavFn()}} ><i class="fa-solid fa-heart"></i></button>
+                <button className= "menu-addTo-fav menu-addedTo-fav" onClick={()=>{RemoveFav();AddToFavFn(items)}} ><i className="fa-solid fa-heart"></i></button>
             }
             </div>
 
