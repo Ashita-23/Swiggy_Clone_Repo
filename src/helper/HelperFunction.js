@@ -4,7 +4,7 @@ export function getFilterList(inputText, allRestaurant) {
   const filterItems = allRestaurant.filter((Restaurants) =>
     Restaurants?.info?.name?.toLowerCase().includes(inputText.toLowerCase())
   );
-  // console.log(filterItems);
+  // console.log(filterItems , "FT");
   return filterItems;
 }
 
@@ -24,7 +24,7 @@ export function getFastDelivery(allRestaurant) {
 
 export function getTopRatedcards(allRestaurant) {
   console.log(allRestaurant,"00")
-const sortedRating = allRestaurant.sort((a,b)=> b?.info?.avgRating- a?.info?.avgRating);
+const sortedRating = allRestaurant.sort((a,b)=> b?.info?.avgRating - a?.info?.avgRating);
 console.log(sortedRating?.avgRating  ,"SR")
 
   const topRated = sortedRating.filter(
