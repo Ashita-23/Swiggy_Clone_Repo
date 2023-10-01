@@ -15,16 +15,16 @@ return(<>
     </figure>
     <div className="cards-detail">
         <span className="name-box">{Data?.name}</span>
-        <span className="cuisine-box">{Data?.cuisines?.join(",")}</span>
+        {/* <span className="cuisine-box">{Data?.cuisines?.join(",")}</span> */}
         <div className="MRP-box">
             <span className={Data?.avgRating < 4 ? "rating-box low-rating":"rating-box "}><i className="fa-solid fa-star"></i>{" "}{Data?.avgRating}</span>
             <span className="time-box">{Data?.sla?.slaString}</span>
             <span className="Price-box">{Data?.costForTwo}</span>
         </div>
-        <div className="offer-and-view-box">
-            <p className="offer-box">{Data?.aggregatedDiscountInfoV2?.descriptionList[0]?.meta || ""}</p>
-            <button className="card-view-btn">Quick view</button>
-        </div>
+        {/* <div className="offer-and-view-box"> */}
+            {/* <p className="offer-box">{Data?.aggregatedDiscountInfoV2?.descriptionList[0]?.meta || ""}</p> */}
+            {/* <button className="card-view-btn">Quick view</button> */}
+        {/* </div> */}
     </div>
 </div>
 
