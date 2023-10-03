@@ -1,5 +1,5 @@
 export function getFilterList(inputText, allRestaurant) {
-  console.log(inputText, "inputText");
+  // console.log(inputText, "inputText");
   // console.log(allRestaurant,"ARL")
   const filterItems = allRestaurant.filter((Restaurants) =>
     Restaurants?.info?.name?.toLowerCase().includes(inputText.toLowerCase())
@@ -23,13 +23,13 @@ export function getFastDelivery(allRestaurant) {
 }
 
 export function getTopRatedcards(allRestaurant) {
-  console.log(allRestaurant,"00")
+  // console.log(allRestaurant,"00")
 const sortedRating = allRestaurant.sort((a,b)=> b?.info?.avgRating - a?.info?.avgRating);
 console.log(sortedRating?.avgRating  ,"SR")
 
   const topRated = sortedRating.filter(
     (cards) => cards?.info?.avgRating > 3.7
   );
-  console.log(topRated,"TPR")
+  // console.log(topRated,"TPR")
   return topRated;
 }
