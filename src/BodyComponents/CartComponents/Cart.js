@@ -31,9 +31,11 @@ const  Carts = ()=>{
     console.log(JSON.parse(localCartData),"getCartItem from localestorage")
    
     if(localCartData!==null && localCartData!== "[]" ){
-      // console.log('Old Cart',JSON.parse(localCartData));
+      console.log('Old Cart',JSON.parse(localCartData));
+      const LocalData = JSON.parse(localCartData)
       dispatch(addAll(JSON.parse(localCartData)))
       // setCarts(JSON.parse(localCartData));
+      console.log(LocalData[0],"LocalData")
     }
   },[])  
 
@@ -41,10 +43,10 @@ const  Carts = ()=>{
 
     useEffect(()=>{
               if(cartItems.length>0){
-                localStorage.setItem("cartItems",JSON.stringify(cartItems ))
+                localStorage.setItem("cartItems",JSON.stringify(cartItems))
               }
     },[Carts ])
-    console.log(localStorage,"set data in localstorage")
+    // console.log(localStorage,"set data in localstorage")
    
     const ClearAllCarts =()=>{
      dispatch(clearAll())
