@@ -1,5 +1,5 @@
 # Swiggy_Clone_Repo (under construction)
-## Repository for my Swiggy Clone project .
+## Repository for my Swiggy Clone project ( Foodies ) .
 Things that I had used in this swiggy clone app are as follow.
 
 1-- Reactjs 
