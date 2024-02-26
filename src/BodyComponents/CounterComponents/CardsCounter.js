@@ -29,10 +29,11 @@ const RestaurantCounter = () => {
   async function getSwiggyData() {
     const Swiggy_API = await fetch(Swiggy_API_URL_New );
     const JsonData = await Swiggy_API.json();
-      //  console.log(JsonData ,  "new Api ")
-      //  console.log(JsonData.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants ,  "new Api data")
-    setAllRestaurant(JsonData.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setResturantList(JsonData.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+       console.log(JsonData ,  "new Api ")
+      //  console.log(JsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ,   "new Api inside  ")
+      //  console.log(JsonData?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants ,  "new Api data")
+    setAllRestaurant(JsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setResturantList(JsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 //early return
   if(!allRestaurant) return null;

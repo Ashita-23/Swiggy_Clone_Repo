@@ -16,7 +16,7 @@ const  Carts = ()=>{
 
   
 
-    const [Carts , setCarts] = useState(cartItems);
+    const [Carts , setCarts] = useState(  );
     console.log(Carts,"Carts useStateList")
 
 
@@ -32,20 +32,21 @@ const  Carts = ()=>{
    
     if(localCartData!==null && localCartData!== "[]" ){
       console.log('Old Cart',JSON.parse(localCartData));
-      const LocalData = JSON.parse(localCartData)
+      // const LocalData = JSON.parse(localCartData)
       dispatch(addAll(JSON.parse(localCartData)))
       // setCarts(JSON.parse(localCartData));
-      console.log(LocalData[0],"LocalData")
+      // console.log( [(localCartData)[0] ],"from get data")
+    
     }
   },[])  
 
 
 
-    useEffect(()=>{
-              if(cartItems.length>0){
-                localStorage.setItem("cartItems",JSON.stringify(cartItems))
-              }
-    },[Carts ])
+    // useEffect(()=>{
+    //           if(Carts.length>0){
+    //             localStorage.setItem("cartItems",JSON.stringify(Carts ))
+    //           }
+    // },[Carts ])
     // console.log(localStorage,"set data in localstorage")
    
     const ClearAllCarts =()=>{
@@ -53,15 +54,16 @@ const  Carts = ()=>{
      localStorage.removeItem("cartItems")
     }
   
-    if(cartItems === null)  return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
+    if (Carts === null) return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
+    // if(cartItems === null)  return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
 
     return ( <div className="cart-outer">
         <div className="cart-heder">
-        <span className="cart-count-btn">Cart Items {cartItems === null && undefined ? 0 : Carts.length}</span>
+        {/* <span className="cart-count-btn">Cart Items {cartItems === null && undefined ? 0 : Carts.length}</span> */}
         <span className="cart-count-btn"><button className="clear-cart-btn" onClick={()=>ClearAllCarts()}>Clear Cart</button></span>
         </div>
             <div className="cart-inner">
-          {Carts.map((items)=>{
+          {Carts?.map((items)=>{
             return (<CartCards key={items.id} items={items}/>)})}
             </div>
         </div>)

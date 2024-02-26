@@ -13,13 +13,14 @@ const MenuCards = ({menuItems})=>{
 
     // console.log(menuLists.card.card.itemCards,"cards list")
     // console.log(menuLists,"cards ")
-    // console.log(menuItems ,"menuItems  ")
+    console.log(menuItems ,"menuItems  ")
 const [addToFav , setAddToFav] = useState(false)
 const dispatch = useDispatch();
 
    const  addItemHandler =  (items)=>{
-    // console.log(items,"add items");
+    console.log(items,"add items");
     dispatch(addItem(items));
+    // localStorage.setItem("cartItems",JSON.stringify(items))
  
    }
 function AddToFavFn(){
@@ -31,8 +32,9 @@ function AddToFavFn(){
 }
 
    const AddToFav = (items)=>{
-       console.log(items,"ATFS")
+    //    console.log(items,"ATFS")
     dispatch(AddFavItem(items))
+    // localStorage.setItem("favouriteItems",JSON.stringify(items))
    }
 
    const RemoveFav = () =>{
@@ -48,7 +50,7 @@ function AddToFavFn(){
           
              <div className="menu-RPS-box">           
              <span className={ menuItems?.card?.info?.ratings?.aggregatedRating?.rating > "3.5 "? "menu-rating" :"menu-rating low-rating"}><i className="fa-solid fa-star"></i> { menuItems?.card?.info?.ratings?.aggregatedRating?.rating || " -- "}</span>
-            <span className="menu-price">₹ { menuItems?.card?.info?.price/100}</span>
+            <span className="menu-price">₹ { menuItems?.card?.info?.defaultPrice/100}</span>
             <span className="menu-inStock">In Stock : { menuItems?.card?.info?.inStock || "--"}</span>
             {
                 !addToFav ? <button className= "menu-addTo-fav" onClick={()=>{AddToFav( menuItems?.card?.info);AddToFavFn()}} ><i className="fa-solid fa-heart"></i></button>:

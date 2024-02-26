@@ -13,13 +13,15 @@ const MenuCounter = () => {
   // console.log(restaurantId);
 
   const [menu, setMenu] = useState([]);
+  // console.log(menu,"menu")
   const [filterMenu, setFilterMenu] = useState([]);   //make it more simple while optimizing our app
+  // console.log(filterMenu, "filterMenu ");
   const [menuHeader, setMenuHeader] = useState([]);
   const [menuOffers, setMenuOffers] = useState([]);
   const [accordion, setAccordion] = useState(false);
 
   // console.log(menu, "menu  ");
-  // console.log(filterMenu, "filterMenu ");
+
   // console.log(menuHeader,"MenuHeader ")
   // console.log(menuOffers,"menuOffers ")
 
@@ -35,8 +37,9 @@ const MenuCounter = () => {
     const MenuList = await fetch(Swiggy_MENU_API_URL);
     const Json = await MenuList.json();
     // console.log(Json, "main Menu Data")
+    // console.log(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards,"menu list for chacking")
 
-    setMenu(Json?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    setMenu(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
     setMenuHeader(Json?.data?.cards[0]?.card?.card?.info);
     setMenuOffers(
       Json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle

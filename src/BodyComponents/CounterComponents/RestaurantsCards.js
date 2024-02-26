@@ -15,7 +15,7 @@ return(<>
     </figure>
     <div className="cards-detail">
         <span className="name-box">{Data?.name}</span>
-        {/* <span className="cuisine-box">{Data?.cuisines?.join(",")}</span> */}
+        <span className="cuisine-box">{Data?.cuisines?.join(",")}</span>
         <div className="MRP-box">
             <span className={Data?.avgRating < 4 ? "rating-box low-rating":"rating-box "}><i className="fa-solid fa-star"></i>{" "}{Data?.avgRating}</span>
             <span className="time-box">{Data?.sla?.slaString}</span>

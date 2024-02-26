@@ -8,16 +8,27 @@ const  CartSlice = createSlice({
     },
     reducers:{
         addItem : (state, action)=>{
-            
             state.items.push(action.payload);
-        } ,
-        removeItem : (state,action)=>{
-            console.log(state,"state")
-            // console.log(action,"action")
-            // let deletItem = state.indexOf(action.payload)
-        //   state.splice( action.payload,1)
-        const ItemsId  = action.payload
+           let setItems =[]
+            setItems.unshift(...state.items,action.payload)
+            localStorage.setItem("cartItems",JSON.stringify(setItems))
+            // console.log(action.payload,"......")
+           const getLocalDataa = localStorage.getItem("cartItems")
+        //    console.log(getLocalDataa,"getlocalData in slice")
+           if(getLocalDataa !== null ){
+            // 
+        }
 
+     
+        console.log(getLocalDataa,"after seting data")
+        //    console.log(getLocalDataa,"after seting data")
+        } ,
+
+
+
+
+        removeItem : (state,action)=>{
+        const ItemsId  = action.payload
         state.items = state.items.filter((items)=>items.id!== ItemsId)
   
         },

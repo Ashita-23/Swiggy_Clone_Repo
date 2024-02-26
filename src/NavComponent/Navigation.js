@@ -10,7 +10,7 @@ import OnOffPopUp from "../BodyComponents/OnlinePopup/Onoff"
 const Navigation = ()=>{
     const  cartItems = useSelector((Store)=>Store.cart.items)
     const  favItems = useSelector((Store)=>Store.favItem.items)
-    console.log(cartItems,"storelog")
+    console.log(cartItems,"Main storage ")
 const IsOnline = UserOnlineStatus()
 if(!IsOnline) return <OnOffPopUp></OnOffPopUp>
     return(<>

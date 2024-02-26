@@ -19,6 +19,8 @@ a{
   height: 12rem;
   width: 18rem;
   /* border: 1px solid red; */
+  border-radius: 20px;
+  overflow: hidden;
 }
 .image {
   height: 11.85rem;
@@ -44,7 +46,7 @@ a{
 .cuisine-box {
   font-size: 0.8rem;
   color: rgb(34, 34, 34);
-  font-weight: 380;
+  font-weight: 400;
   padding: 0.5rem 0rem;
   /* border: 1px solid rgb(30, 48, 2); */
   overflow: hidden;
@@ -58,8 +60,8 @@ text-transform: capitalize;
     flex-direction: row;
     justify-content: space-evenly;
   /* border: 1px solid rgb(243, 140, 6); */
-  border-bottom: 1px solid rgb(219, 217, 217);
-  padding: 0.5rem 0rem;
+  /* border-bottom: 1px solid rgb(219, 217, 217);
+  padding: 0.5rem 0rem; */
 
 }
 
@@ -130,4 +132,5 @@ text-transform: capitalize;
   background-color: #fd4011;
   color: white;
   padding: 0.2rem 0.3rem;
+  border-top-left-radius: 11px;
   box-shadow: rgba(0, 0, 0, 0.418) 0px 3px 8px; }

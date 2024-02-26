@@ -10,7 +10,7 @@ const Footer = () =>{
 
 
    const [FooterData,setFooterData] = useState()
-   console.log(FooterData , "FD")
+  //  console.log(FooterData , "FD")
   useEffect(()=>{
     getFooterData()
   },[])

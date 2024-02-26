@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import "./FavoriteCart.css"
 import "./FavoriteCartMedia.css"
-import { ReFavItem , AddAllFavItems } from "../../Util/FavSlice"
+import { ReFavItem , ClearAll} from "../../Util/FavSlice"
 import { useState } from "react"
 import { useEffect } from "react"
 import {Swiggy_IMAGE_CDN_URL} from "../../Util/ApiConfig"
@@ -46,6 +46,7 @@ const FavItemRemove = (id) =>{
 }
 
 const RemoveAll = ()=>{
+    dispatch(ClearAll())
  localStorage.removeItem("FavItems")
 }
 
