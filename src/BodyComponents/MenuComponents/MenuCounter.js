@@ -16,13 +16,12 @@ const MenuCounter = () => {
   // console.log(menu,"menu")
   const [filterMenu, setFilterMenu] = useState([]);   //make it more simple while optimizing our app
   // console.log(filterMenu, "filterMenu ");
-  const [menuHeader, setMenuHeader] = useState([]);
+  
   const [menuOffers, setMenuOffers] = useState([]);
-  const [accordion, setAccordion] = useState(false);
+  const [accordionIndex, setAccordionIndex] = useState(0);
+   
 
-  // console.log(menu, "menu  ");
-
-  // console.log(menuHeader,"MenuHeader ")
+  // console.log(accordionIndex, "accordionIndex  ");
   // console.log(menuOffers,"menuOffers ")
 
   useEffect(() => {
@@ -40,9 +39,9 @@ const MenuCounter = () => {
     // console.log(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards,"menu list for chacking")
 
     setMenu(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    setMenuHeader(Json?.data?.cards[0]?.card?.card?.info);
+  
     setMenuOffers(
-      Json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      Json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers
     );
   }
 
@@ -57,41 +56,37 @@ const MenuCounter = () => {
     // console.log(newList, "NL");
     return newList;
   }
-
-function AccordionHandler(){
-  if(accordion === false){
-    setAccordion(true)
-  }else if (accordion === true){
-    setAccordion(false)
-  }
+const toggleAbleIndex=(index)=>{
+  const newIndex = accordionIndex === index ? "null" : index;
+  setAccordionIndex(newIndex)
 }
-
-
   return !menu ? (
     <CounterShimmer />
   ) : (
     <>
       <div className="menu-outer" key={"menu-outer"}>
-        <MenuHeader menuHeader={menuHeader} />
+        <MenuHeader  />
         {/* <MenuOfferList menuOffers={menuOffers} /> */}
 
  
         <div className="menu-inner" key={"menu-inner"}>
-          {filterMenu.map((menuLists) => {
+          {filterMenu.map((menuLists,index) => {
             {/* console.log(menuLists, "ML"); */}
                {/* if(menuLists.length === null && 0 ) return  */}
-            return (!menuLists  ) ? <div>No menu is here ..................!</div> :  (
+            return (!menuLists) ? <div>No menu is here ..................!</div> :  (
               <>
                 <div className="accordionContainor" key={menuLists?.card?.card?.itemCards?.card?.info?.id} >
-                  <div className="accordion_header" onClick={()=>AccordionHandler()} >
+                  <div className="accordion_header" onClick={()=>setAccordionIndex(index)} >
                   <p>{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"} </p>
-                   <p>{!accordion ?<i className="fa-solid fa-chevron-down"></i>  :<i className="fa-solid fa-chevron-up"></i>}</p>
+                   <p>{accordionIndex === index  ?  <i className="fa-solid fa-chevron-down" onClick={()=>toggleAbleIndex(index)}></i> 
+                   : <i className="fa-solid fa-chevron-up"  onClick={()=>toggleAbleIndex(index)} ></i> }</p>
                    </div>
-                { !accordion ? " " : <div className="accordionBody" >
+                  {  accordionIndex === index  &&  <div className="accordionBody" >
               
-                          {menuLists?.card?.card?.itemCards.map((menuItems) => (<MenuCards menuItems={menuItems} key={menuItems?.card?.info?.id}></MenuCards>) )}
+                          {menuLists?.card?.card?.itemCards.map((menuItems) =>
+                           (<MenuCards menuItems={menuItems}
+                            key={menuItems?.card?.info?.id}></MenuCards>) )}
                   </div>}
-                  
                 </div>
               </>
             );

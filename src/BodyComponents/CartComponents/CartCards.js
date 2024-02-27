@@ -10,10 +10,9 @@ const CartCards = ({items})=>{
 
 const dispatch = useDispatch()
 
-    const removeItemHandler = (item) =>{
-        dispatch(removeItem(item))
-        // cartItems.slilce(item,1)
-        // localStorage.removeItem("cartItems")
+    const removeItemHandler = (id) =>{
+        dispatch(removeItem(id))
+    
     }
 
   

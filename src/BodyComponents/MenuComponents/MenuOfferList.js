@@ -1,5 +1,5 @@
 
-
+import "./offerList.css"
 const MenuOfferList= ({menuOffers})=>{
     // console.log(menuOffers,"MOFL")
 

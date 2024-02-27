@@ -13,12 +13,12 @@ const MenuCards = ({menuItems})=>{
 
     // console.log(menuLists.card.card.itemCards,"cards list")
     // console.log(menuLists,"cards ")
-    console.log(menuItems ,"menuItems  ")
+    // console.log(menuItems ,"menuItems  ")
 const [addToFav , setAddToFav] = useState(false)
 const dispatch = useDispatch();
 
    const  addItemHandler =  (items)=>{
-    console.log(items,"add items");
+    // console.log(items,"add items");
     dispatch(addItem(items));
     // localStorage.setItem("cartItems",JSON.stringify(items))
  
