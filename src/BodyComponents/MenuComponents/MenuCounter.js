@@ -56,10 +56,10 @@ const MenuCounter = () => {
     // console.log(newList, "NL");
     return newList;
   }
-const toggleAbleIndex=(index)=>{
-  const newIndex = accordionIndex === index ? "null" : index;
-  setAccordionIndex(newIndex)
-}
+// const toggleAbleIndex=(index)=>{
+//   const newIndex = accordionIndex === index ? "null" : index;
+//   setAccordionIndex(newIndex)
+// }
   return !menu ? (
     <CounterShimmer />
   ) : (
@@ -78,8 +78,8 @@ const toggleAbleIndex=(index)=>{
                 <div className="accordionContainor" key={menuLists?.card?.card?.itemCards?.card?.info?.id} >
                   <div className="accordion_header" onClick={()=>setAccordionIndex(index)} >
                   <p>{menuLists.card.card.title || " "} {"("}{menuLists.card.card.itemCards.length}{")"} </p>
-                   <p>{accordionIndex === index  ?  <i className="fa-solid fa-chevron-down" onClick={()=>toggleAbleIndex(index)}></i> 
-                   : <i className="fa-solid fa-chevron-up"  onClick={()=>toggleAbleIndex(index)} ></i> }</p>
+                   <p>{accordionIndex === index  ?  <i className="fa-solid fa-chevron-down" ></i> 
+                   : <i className="fa-solid fa-chevron-up"   ></i> }</p>
                    </div>
                   {  accordionIndex === index  &&  <div className="accordionBody" >
               

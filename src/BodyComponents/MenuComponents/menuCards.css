@@ -1,22 +1,18 @@
 
-
-.menuCard-outer{
+.menuCard-Outer{
     height: auto;
-    width: 60rem;
-    /* border:1px solid red; */
-    border-bottom: 1px solid rgb(194, 194, 194);
+    width: 90%;
+    border: 1px solid violet;
     padding: 1rem 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 0.5rem;
-    /* margin-bottom: 1rem; */
+    justify-content: space-between;
 }
 
 .menuCards-details{
-    /* border: 1px solid red; */
+    border: 1px solid rgb(255, 217, 0);
     padding: 0.5rem;
     display: flex;
     flex-direction:column;
@@ -116,7 +112,7 @@ position: relative;
 
 .add-to-cart-btn{
     position: absolute;
-    margin-left: 15px;
+    margin-left: 8px;
     margin-top: -22px;
     border-radius: 5px;
     border:1px transparent;

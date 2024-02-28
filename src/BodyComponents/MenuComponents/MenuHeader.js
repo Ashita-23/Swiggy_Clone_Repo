@@ -38,7 +38,7 @@ const MenuHeader  = () => {
       <div>
      <h1>{menuHeader.text}</h1></div>
      <div className="">
-        <p>{resInfo.name}</p>
+        {/* <p>{resInfo.name}</p> */}
         <p>{resInfo.cuisines}</p>
         <p>{resInfo.areaName}</p>
         <p><i className="fa-solid fa-person-biking"></i> {resInfo?.feeDetails?.message}</p>

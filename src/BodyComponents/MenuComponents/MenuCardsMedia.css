@@ -1,189 +1,206 @@
 
 @media (min-width:260px) {
     
-.menuCard-outer{
-    height: auto;
-    width: 100%;
-    /* border:1px solid red; */
-    border-bottom: 1px solid rgb(194, 194, 194);
-    padding: 1rem 0.5rem;
-    justify-content: space-evenly;
-}
 
-.menuCards-details{
-    /* border: 1px solid red; */
-    padding: 0rem;
-    flex-direction:column;
-}
-
-
-.category{
-    color: rgb(66, 66, 66);
-    font-size: 1rem;
-    padding: 0.1rem;
-    font-weight: 400;
-}
-
-.menu-name{
-    font-size:1 rem;
-    font-weight: 300;
-    /* padding: 0.1rem; */
-    padding-bottom: 0.2rem;
-    color: rgb(56, 56, 56);
+    .menuCard-Outer{
+        padding: 0.5rem;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        border: 1px solid blue;
+     
+    }
     
-}
+    .menuCards-details{
+        /* border: 1px solid red; */
+        align-items: center;
+    }
 
-
-.menu-RPS-box{
-    border-top: 1px solid gainsboro;
-    margin-top: 2px;
-    /* border: 1px solid red;    */
-
-}
-
-.menu-rating{
-    margin: 0.3rem 0.2rem ;
-    padding: 0.2rem 0.4rem;
-}
-
-
-.menu-price{
-    margin: 0.3rem 0.2rem ;
-    padding: 0.2rem;
-    font-size:1 rem;
-}
-
-.menu-inStock{
-    margin: 0.3rem 0.5rem ;
-    padding: 0.2rem;
-    font-size:1 rem;
-}
-
+    .description{
+        font-size: .8rem;
+        font-weight: 300;
+        /* padding: 0.1rem; */
+        padding-bottom: 0.2rem ;
+        align-items: center;
+        color: rgb(241, 0, 0);
+    }
+    
+    .category{
+        font-size: 0.9rem; 
+       
+    }
+    
+    .menu-name{
+        font-size: 0.8rem;
+      
+    }
+    
+  
+   
+    
+    
+    .menu-rating{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem 0.2rem;
+        font-size: 0.9rem;
+        
+    }
+    
+    .menu-price{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 0.9rem;
+       
+    }
+    
+    .menu-inStock{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 0.9rem;
+        
+    }
+    
+    
+    
+    .menu-addTo-fav{
+    
+        font-size: 0.9rem;
+        padding: 0.2rem;
+    }
 
 
 }
 
 @media (min-width:320px) {
-    .menuCard-outer{
-        height: auto;
+ 
+
+    .menuCard-Outer{
         width: 100%;
-        /* border:1px solid red; */
-        border-bottom: 1px solid rgb(194, 194, 194);
-        padding: 1rem 0.5rem;
+        justify-content: center;
+        /* justify-content: space-between;    */
     }
-    
     .menuCards-details{
         /* border: 1px solid red; */
-        padding: 0rem .2rem;
-        flex-direction:column;
+        align-items: center;
     }
-    
-    
-    .category{
-        color: rgb(75, 72, 72);
-        font-size: 1.1rem;
-        padding: 0.1rem;
-        font-weight: 400;
-    }
-    
-    .menu-name{
-        font-size: 1rem;
-        font-weight: 300;
-        /* padding: 0.1rem; */
-        padding-bottom: 0.2rem;
-        color: rgb(68, 68, 68);
+
+    .add-to-cart-btn{
+        font-size: 0.8rem;
+        margin-top: -18px;
+        }
+ 
+      
+        .category{
+            font-size: 0.9rem; 
+           
+        }
         
-    }
-    
-    
-    .menu-RPS-box{
-        border-top: 1px solid gainsboro;
-        margin-top: 2px;
-        /* border: 1px solid red;    */
-    
-    }
-    
-    .menu-rating{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    
-    .menu-price{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-    .menu-inStock{
-        margin: 0.3rem 0.5rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-    .menu-addTo-fav{
-        font-size: 1.1rem;
+        .menu-name{
+            font-size: 0.8rem;
+        }
         
-    }
+      
+       
+        
+        
+        .menu-rating{
+            margin: 0.2rem 0.2rem ;
+            padding: 0.2rem 0.2rem;
+            font-size: 0.9rem;
+            
+        }
+        
+        .menu-price{
+            margin: 0.2rem 0.2rem ;
+            padding: 0.2rem;
+            font-size: 0.9rem;
+           
+        }
+        
+        .menu-inStock{
+            margin: 0.2rem 0.2rem ;
+            padding: 0.2rem;
+            font-size: 0.9rem;
+            
+        }
+        
+        
+        
+        .menu-addTo-fav{
+        
+            font-size: 0.9rem;
+            padding: 0.2rem;
+        }
     
+    
+        
 }
 
 @media (min-width: 481px) {
-    .menuCard-outer{
-        height: auto;
-        width: 90%;
-        /* border:1px solid red; */
-        border-bottom: 1px solid rgb(194, 194, 194);
-        padding: 1rem 0.5rem;
-    }
+ 
     
+    .menuCard-Outer{
+        width: 100%;
+        padding: 0.5rem;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+      align-items: center;
+        border: 1px solid blue;
+     
+    }
     .menuCards-details{
         /* border: 1px solid red; */
-        padding: 0rem;
-        flex-direction:column;
+         align-items: flex-start;
     }
-    
-    
-    .category{
-        color: rgb(66, 66, 66);
-        font-size: 1.1rem;
-        padding: 0.1rem;
-        font-weight: 400;
-    }
-    
-    .menu-name{
-        font-size: 1rem;
+
+    .description{
+        font-size: .8rem;
         font-weight: 300;
         /* padding: 0.1rem; */
-        padding-bottom: 0.2rem;
-        color: rgb(56, 56, 56);
+        padding-bottom: 0.2rem ;
+        color: rgb(241, 0, 0);
+    }
+    
+    .category{
+        font-size: 0.8rem; 
+       
+    }
+       
+    .menu-name{
+        font-size: 0.8rem;
+        color: rgb(61, 61, 61);
+        font-weight: 300;
+    }
+  
+   
+    
+    
+    .menu-rating{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem 0.2rem;
+        font-size: 0.9rem;
+        
+    }
+    
+    .menu-price{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 0.9rem;
+       
+    }
+    
+    .menu-inStock{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 0.9rem;
         
     }
     
     
-    .menu-RPS-box{
-        border-top: 1px solid gainsboro;
-        margin-top: 2px;
-        /* border: 1px solid red;    */
     
-    }
+    .menu-addTo-fav{
     
-    .menu-rating{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    
-    .menu-price{
-        margin: 0.3rem 0.2rem ;
+        font-size: 0.9rem;
         padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-    .menu-inStock{
-        margin: 0.3rem 0.5rem ;
-        padding: 0.2rem;
-        font-size:1rem;
     }
     
  
@@ -191,179 +208,175 @@
 }
 
 @media (min-width: 769px) {
-    .menuCard-outer{
-        height: auto;
-        width: 80%;
-        /* border:1px solid red; */
-        border-bottom: 1px solid rgb(194, 194, 194);
-        padding: 1rem 0.5rem;
-    }
-    
+
     .menuCards-details{
         /* border: 1px solid red; */
-        padding: 0rem;
-        flex-direction:column;
+         align-items: flex-start;
+    }
     }
     
     
-    .category{
-        color: rgb(66, 66, 66);
-        font-size: 1.1rem;
-        padding: 0.1rem;
-        font-weight: 400;
-    }
+  
     
-    .menu-name{
-        font-size: 1rem;
-        font-weight: 300;
-        /* padding: 0.1rem; */
-        padding-bottom: 0.2rem;
-        color: rgb(56, 56, 56);
-        
-    }
-    
-    
-    .menu-RPS-box{
-        border-top: 1px solid gainsboro;
-        margin-top: 2px;
-        /* border: 1px solid red;    */
-    
-    }
-    
-    .menu-rating{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    
-    .menu-price{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-    .menu-inStock{
-        margin: 0.3rem 0.5rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-}
+
 
 @media (min-width: 1025px) {
-    .menuCard-outer{
-        height: auto;
-        width: 70%;
-        /* border:1px solid red; */
-        border-bottom: 1px solid rgb(194, 194, 194);
-        padding: 1rem 0.5rem;
-    }
+   
+ 
     
-    .menuCards-details{
-        /* border: 1px solid red; */
-        padding: 0rem;
-        flex-direction:column;
-    }
-    
-    
-    .category{
-        color: rgb(66, 66, 66);
-        font-size: 1.1rem;
-        padding: 0.1rem;
-        font-weight: 400;
-    }
-    
-    .menu-name{
-        font-size: 1rem;
-        font-weight: 300;
-        /* padding: 0.1rem; */
-        padding-bottom: 0.2rem;
-        color: rgb(56, 56, 56);
-        
-    }
-    
-    
-    .menu-RPS-box{
-        border-top: 1px solid gainsboro;
-        margin-top: 2px;
-        /* border: 1px solid red;    */
-    
-    }
-    
-    .menu-rating{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    
-    .menu-price{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
-    
-    .menu-inStock{
-        margin: 0.3rem 0.5rem ;
-        padding: 0.2rem;
-        font-size:1rem;
-    }
 }
 
 @media (min-width: 1201px) {
-    .menuCard-outer{
-        height: auto;
-        width: 70%;
-        /* border:1px solid red; */
-        border-bottom: 1px solid rgb(194, 194, 194);
-        padding: 1rem 0.5rem;
+    .menuCard-Outer{
+        width: 100%;
+        padding: 0.5rem;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+      align-items: center;
+        border: 1px solid blue;
+     
     }
-    
+
     .menuCards-details{
         /* border: 1px solid red; */
-        padding: 0rem;
-        flex-direction:column;
+         align-items: flex-start;
     }
-    
-    
-    .category{
-        color: rgb(66, 66, 66);
-        font-size: 1.2rem;
-        padding: 0.1rem;
-        font-weight: 400;
-    }
-    
-    .menu-name{
-        font-size: 1.1rem;
+
+    .description{
+        font-size: 1rem;
         font-weight: 300;
         /* padding: 0.1rem; */
-        padding-bottom: 0.2rem;
-        color: rgb(56, 56, 56);
+        padding-bottom: 0.2rem ;
+        color: rgb(131, 19, 19);
+    }
+    
+    .category{
+        font-size: 0.9rem; 
+       
+    }
+       
+    .menu-name{
+        font-size: 0.8rem;
+        color: rgb(61, 61, 61);
+        font-weight: 300;
+    }
+  
+   
+    
+    
+    .menu-rating{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem 0.2rem;
+        font-size: 1rem;
+        
+    }
+    
+    .menu-price{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 1rem;
+       
+    }
+    
+    .menu-inStock{
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem;
+        font-size: 1rem;
         
     }
     
     
-    .menu-RPS-box{
-        border-top: 1px solid gainsboro;
-        margin-top: 2px;
-        /* border: 1px solid red;    */
     
+    .menu-addTo-fav{
+    
+        font-size: 1rem;
+        padding: 0.2rem;
     }
+    
+
+    
+
+}
+@media (min-width: 1500px) {
+  
+    .menuCard-Outer{
+        width: 100%;
+        padding: 0.5rem;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+      align-items: center;
+        /* border: 1px solid blue; */
+     
+    }
+    .menuCards-details{
+        /* border: 1px solid red; */
+         align-items: flex-start;
+    }
+    .description{
+        font-size: 1rem;
+        font-weight: 300;
+        /* padding: 0.1rem; */
+        padding-bottom: 0.2rem ;
+        color: rgb(44, 31, 31);
+    }
+    
+    .category{
+        font-size: 0.9rem; 
+       
+    }
+       
+    .menu-name{
+        font-size: 0.8rem;
+        color: rgb(61, 61, 61);
+        font-weight: 300;
+    }
+  
+   
+    
     
     .menu-rating{
-        margin: 0.3rem 0.2rem ;
-        padding: 0.2rem 0.4rem;
+        margin: 0.2rem 0.2rem ;
+        padding: 0.2rem 0.2rem;
+        font-size: 0.9rem;
+        
     }
     
-    
     .menu-price{
-        margin: 0.3rem 0.2rem ;
+        margin: 0.2rem 0.2rem ;
         padding: 0.2rem;
-        font-size:1.1rem;
+        font-size: 0.9rem;
+       
     }
     
     .menu-inStock{
         margin: 0.3rem 0.5rem ;
         padding: 0.2rem;
-        font-size:1.1rem;
+        font-size: 0.9rem;
+        
     }
+    .veg{
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+        color: green;
+    }
+    
+    .nonVeg{
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+   
+    }
+    
+    
+    .menu-addTo-fav{
+    
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+    
+    .add-to-cart-img{
+        height: 6rem;
+        width: 7rem;
+      
+        }
+    
 }

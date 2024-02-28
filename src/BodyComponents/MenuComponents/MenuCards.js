@@ -1,7 +1,7 @@
 
 
 import {  useDispatch } from "react-redux"
-import "./MenuCards.css"
+import "./menuCards.css"
 import "./MenuCardsMedia.css"
 import { addItem } from "../../Util/CartSlice"
 import { AddFavItem , ReFavItem} from "../../Util/FavSlice"
@@ -42,14 +42,14 @@ function AddToFavFn(){
    }
 
     return(<>
-        <div className="menuCard-outer">
+        <div className="menuCard-Outer">
            <div className="menuCards-details">
            <span className={ menuItems?.card?.info?.itemAttribute?.vegClassifier === "VEG" ? "veg" : "nonVeg"}><i className="fa-solid fa-utensils"></i></span>
            <span className="category">{ menuItems?.card?.info?.category}</span>
             <span className="menu-name">{ menuItems?.card?.info?.name}</span>
           
              <div className="menu-RPS-box">           
-             <span className={ menuItems?.card?.info?.ratings?.aggregatedRating?.rating > "3.5 "? "menu-rating" :"menu-rating low-rating"}><i className="fa-solid fa-star"></i> { menuItems?.card?.info?.ratings?.aggregatedRating?.rating || " -- "}</span>
+             <span className={ menuItems?.card?.info?.ratings?.aggregatedRating?.rating > "3.5 "? "menu-rating" :"menu-rating low-rating"}><i className="fa-solid fa-star"></i> { menuItems?.card?.info?.ratings?.aggregatedRating?.rating || "-"}</span>
             <span className="menu-price">₹ { menuItems?.card?.info?.defaultPrice/100}</span>
             <span className="menu-inStock">In Stock : { menuItems?.card?.info?.inStock || "--"}</span>
             {
