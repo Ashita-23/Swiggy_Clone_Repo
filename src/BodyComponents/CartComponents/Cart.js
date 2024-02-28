@@ -30,7 +30,6 @@ const  Carts = ()=>{
     }
   
     if (Carts === null) return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
-    // if(cartItems === null)  return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
 
     return ( <div className="cart-outer">
         <div className="cart-heder">
