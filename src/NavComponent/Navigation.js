@@ -27,7 +27,7 @@ if(!IsOnline) return <OnOffPopUp></OnOffPopUp>
         <li><Link to="/"><i className="fa-solid fa-house"></i></Link></li>
         <li><Link  to="/about"><i className="fa-solid fa-circle-exclamation"></i></Link></li>
         <li><Link to="/signIn"><i className="fa-solid fa-circle-user"></i></Link></li>
-        <li><Link to="/cart"><i className="fa-solid fa-cart-shopping"></i>{cartItems === null    ? 0 : cartItems.length}</Link></li>
+        <li><Link to="/cart"><i className="fa-solid fa-cart-shopping"></i>{cartItems=== null  ? 0 : cartItems.length}</Link></li>
         <li><Link to="/favorite" ><i className="fa-solid fa-heart"></i></Link></li>
     </ul>
    </nav>

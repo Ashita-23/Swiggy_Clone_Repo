@@ -1,5 +1,6 @@
 
 import "./MenuHeader.css"
+import "./MenuHeaderMedia.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MenuOfferList from "./MenuOfferList";
@@ -33,23 +34,23 @@ const MenuHeader  = () => {
           Json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
         );
       }
-    console.log(menuHeader.text,"MheadInfo")
-    return(<div>
-      <div>
-     <h1>{menuHeader.text}</h1></div>
-     <div className="">
+    console.log(menuHeader,"MheadInfo")
+    return(<div className="menuHeader">
+    <div className="menuHeadInner">
+    <div className="menuResInfo">
+     <h1 className="restroName">{menuHeader.text}</h1>
+   
         {/* <p>{resInfo.name}</p> */}
-        <p>{resInfo.cuisines}</p>
-        <p>{resInfo.areaName}</p>
-        <p><i className="fa-solid fa-person-biking"></i> {resInfo?.feeDetails?.message}</p>
+        <p className="subInfo">{resInfo.cuisines}</p>
+        <p className="subInfo">{resInfo.areaName}</p>
+        <p className="subInfo"><i className="fa-solid fa-person-biking"></i> {resInfo?.feeDetails?.message}</p>
 
     </div>
-    <div>
-         <span>{menuHeader.avgRatingString}</span><br/>
-         <span>{menuHeader.totalRatingsString
-}</span>
- <p>{menuHeader?.feeDetails?.message}</p> 
-    </div>
+    <div className="head-resInfo-rating">
+         <span className="avgRatingString"><i className="fa-solid fa-star"></i> {""}{resInfo.avgRatingString}</span>
+         <span className="totalRatingsString">{resInfo.totalRatingsString}</span>
+
+    </div></div>
  <MenuOfferList menuOffers = {MenuOffers}/>
     </div>)
 }
