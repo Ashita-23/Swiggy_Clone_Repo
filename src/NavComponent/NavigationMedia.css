@@ -3,17 +3,19 @@
     .Nav-box{
         height: 4rem;
         width: 100%;
+        border: 1px solid red;
+        padding:  0rem .2rem;
     }
     .Logo-text{
         padding: 0.3rem 0.5rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .Logo-ul{
         display: none;
     }
     .icone-ul-two li a{
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        padding: 0.5rem 0.4rem;
     }
 }
 
