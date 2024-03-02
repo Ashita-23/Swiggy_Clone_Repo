@@ -1,4 +1,5 @@
 import "./restaurantsCards.css"
+import "./restaurantsCardMedia.css"
 import {Swiggy_IMAGE_CDN_URL} from "../../Util/ApiConfig"
 
 

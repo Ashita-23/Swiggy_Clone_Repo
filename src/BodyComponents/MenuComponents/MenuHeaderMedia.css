@@ -10,6 +10,7 @@
 
     .restroName{
         font-size: 1.2rem;
+        
     }
     .subInfo{
         font-size: 0.8rem;
@@ -81,15 +82,15 @@
         /* border: 1px solid red; */
         width: 60%;
         height: auto;
+        padding: 0.5rem 1rem;
     }
 
    
     .restroName{
-        font-size: 1.2rem;
-      
+        font-size: 1.8rem;
     }
     .subInfo{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
  @media (min-width:1550px) {
@@ -97,13 +98,14 @@
         /* border: 1px solid red; */
         width: 60%;
         height: auto;
+        padding: 0.5rem 1rem;
     }
 
    
     .restroName{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
     .subInfo{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }

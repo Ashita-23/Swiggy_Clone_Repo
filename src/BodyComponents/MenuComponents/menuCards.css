@@ -2,7 +2,7 @@
 .menuCard-Outer{
     height: auto;
     width: 90%;
-    border: 1px solid violet;
+   border-bottom: 1px solid gray;
     padding: 1rem 1rem;
     display: flex;
     flex-direction: row;
@@ -12,7 +12,7 @@
 }
 
 .menuCards-details{
-    border: 1px solid rgb(255, 217, 0);
+    /* border: 1px solid rgb(255, 217, 0); */
     padding: 0.5rem;
     display: flex;
     flex-direction:column;

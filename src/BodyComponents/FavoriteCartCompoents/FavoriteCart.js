@@ -31,7 +31,7 @@ const RemoveAll = ()=>{
             <span className="favCard-name">{items?.name}</span>
              <div className="favCard-RPS-box">           
              <span className={items?.ratings?.aggregatedRating?.rating > "3.5 "? "favCard-rating" :"favCard-rating low-rating"}>
-             <i className="fa-solid fa-star"></i> {items?.ratings?.aggregatedRating?.rating || " -- "}</span>
+             <i className="fa-solid fa-star"></i> {items?.ratings?.aggregatedRating?.rating || " - "}</span>
             <span className="favCard-price">Rs.{items?.defaultPrice/100}</span>
             <span className="favCard-inStock">In Stock : {items?.inStock || "--"}</span></div>
 

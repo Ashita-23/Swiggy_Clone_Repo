@@ -6,7 +6,7 @@
         padding: 0.5rem;
         flex-wrap: wrap-reverse;
         justify-content: center;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
      
     }
     
@@ -144,7 +144,7 @@
         flex-wrap: wrap-reverse;
         justify-content: space-between;
       align-items: center;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
      
     }
     .menuCards-details{
@@ -233,7 +233,7 @@
         flex-wrap: wrap-reverse;
         justify-content: space-between;
       align-items: center;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
      
     }
 
