@@ -4,11 +4,12 @@ import "./FavoriteCart.css"
 import "./FavoriteCartMedia.css"
 import { ReFavItem , ClearAll} from "../../Util/FavSlice"
 import {Swiggy_IMAGE_CDN_URL} from "../../Util/ApiConfig"
+import emptyCart from "../../Assets/empty-cart.jpg"
 
 const FavoriteCart = ()=>{
     const dispatch = useDispatch()
 const FavItems = useSelector((store)=>store.favItem.items)
-console.log(FavItems,"FCI")
+// console.log(FavItems,"FCI")
 
 const FavItemRemove = (id) =>{
     dispatch(ReFavItem(id))
@@ -19,8 +20,10 @@ const RemoveAll = ()=>{
  localStorage.removeItem("favItem")
 }
 
+if(!FavItems) return null 
 
- return(  <div className="fav_outer">
+ return (FavItems.length===0)?<div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>:
+  (  <div className="fav_outer">
  <div className="fav_header">Items {FavItems .length}<button className="fav_btn" onClick={()=>RemoveAll()}>Clear All</button></div>
                <div className="fav_inner">
 
@@ -40,9 +43,7 @@ const RemoveAll = ()=>{
             <figure className="remove-from-favCard-img"><img className="favCard-img" src={Swiggy_IMAGE_CDN_URL+ items?.imageId} /></figure>
             <button className="remove-from-favCard-btn" onClick={()=>FavItemRemove(items?.id)}>Remove</button>
            </div>
-        </div>) )
-   
-      
+        </div>) )   
     }
 
  </div>

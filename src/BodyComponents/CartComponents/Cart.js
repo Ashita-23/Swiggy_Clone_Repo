@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { clearAll, addAll} from "../../Util/CartSlice"
+import { clearAll} from "../../Util/CartSlice"
 import "./Cart.css"
 import "./CartMedia.css"
 import CartCards from "./CartCards"
@@ -12,10 +12,10 @@ import { useEffect } from "react"
 const  Carts = ()=>{
   const dispatch = useDispatch()
     const cartItems = useSelector((store) => store.cart.items)
-    console.log(cartItems," cartItems slice data")
+    // console.log(cartItems," cartItems slice data")
     
     const [Carts , setCarts] = useState(  );
-    console.log(Carts,"Carts useStateList")
+    // console.log(Carts,"Carts useStateList")
 
 
     
@@ -29,9 +29,8 @@ const  Carts = ()=>{
      localStorage.clear("cartItems")
     }
   
-    if (Carts === null) return <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>
-
-    return ( <div className="cart-outer">
+    if (!Carts ) return null;
+    return (Carts.length===0) ? <div className="empty-cart-error"><img src={emptyCart} className="empty-cart-img" /><h1>Add Your food item .....</h1></div>:( <div className="cart-outer">
         <div className="cart-heder">
         {/* <span className="cart-count-btn">Cart Items {cartItems === null && undefined ? 0 : Carts.length}</span> */}
         <span className="cart-count-btn"><button className="clear-cart-btn" onClick={()=>ClearAllCarts()}>Clear Cart</button></span>

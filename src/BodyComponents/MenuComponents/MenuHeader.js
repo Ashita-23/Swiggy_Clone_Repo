@@ -25,7 +25,7 @@ const MenuHeader  = () => {
           "&submitAction=ENTER";
         const MenuList = await fetch(Swiggy_MENU_API_URL);
         const Json = await MenuList.json();
-        console.log(Json, "main Menu Data")
+        // console.log(Json, "main Menu Data")
         // console.log(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards,"menu list for chacking")
     
         setResInfoHeader(Json?.data?.cards[2]?.card?.card?.info);

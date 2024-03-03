@@ -6,7 +6,7 @@ import "./MenuCounterMedia.css";
 import MenuHeader from "./MenuHeader";
 import MenuCards from "./MenuCards";
 import CounterShimmer from "../ShimmerComponents/CounterShimmer";
-import MenuOfferList from "./MenuOfferList";
+
 // import CardsShimmer from "../ShimmerComponents/CardsShimmer"
 const MenuCounter = () => {
   const restaurantId = useParams();
@@ -17,7 +17,6 @@ const MenuCounter = () => {
   const [filterMenu, setFilterMenu] = useState([]);   //make it more simple while optimizing our app
   // console.log(filterMenu, "filterMenu ");
   
-  const [menuOffers, setMenuOffers] = useState([]);
   const [accordionIndex, setAccordionIndex] = useState(0);
    
 
@@ -40,9 +39,9 @@ const MenuCounter = () => {
 
     setMenu(Json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
   
-    setMenuOffers(
-      Json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers
-    );
+    // setMenuOffers(
+    //   Json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers
+    // );
   }
 
   useEffect(() => {
@@ -60,9 +59,10 @@ const MenuCounter = () => {
 //   const newIndex = accordionIndex === index ? "null" : index;
 //   setAccordionIndex(newIndex)
 // }
-  return !menu ? (
-    <CounterShimmer />
-  ) : (
+
+if (!menu) return null ;  
+  return (filterMenu.length===0) ?<CounterShimmer/>:
+  (
     <>
       <div className="menu-outer" key={"menu-outer"}>
         <MenuHeader  />

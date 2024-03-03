@@ -7,7 +7,7 @@ import "./SignIn.css"
 const SignIn = ()=>{
     const FavItems = useSelector((store)=>store.favItem.items)
 
-console.log(FavItems,"FIfromslice")
+// console.log(FavItems,"FIfromslice")
   const initialvalue = {userName:" " , userEmail: ""}
     const [form , setForm] = useState(initialvalue)
     const [formError , setFormError ] = useState({})
