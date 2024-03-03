@@ -4,7 +4,7 @@
     .cartCard-outer{
         height: auto;
         width: 100%;
-        border:1px solid red;
+        /* border:1px solid red; */
         border-bottom: 1px solid rgb(194, 194, 194);
         padding: 0.2rem;
         display: flex;

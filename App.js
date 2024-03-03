@@ -25,7 +25,7 @@ const App = ()=>{
         {/* <ErrorInSearch></ErrorInSearch> */}
         <Outlet/>
 
-        {/* <Footer/> */}
+        <Footer/>
         </Provider> 
     </>)
 }
