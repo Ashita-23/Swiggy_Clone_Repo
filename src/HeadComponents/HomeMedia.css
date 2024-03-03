@@ -5,7 +5,8 @@
     height: auto;
     width: 100%;
     /* align-items: center; */
-    /* border: 1px solid red; */
+    border:none;
+ 
 
     }
     
@@ -1004,3 +1005,10 @@
     }
 }
 
+@media (min-width: 1220px) {
+    
+    .home-outer{
+        border: none; 
+    }
+ 
+    }

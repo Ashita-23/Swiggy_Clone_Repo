@@ -19,71 +19,66 @@ const Footer = () =>{
   async function  getFooterData (){
     const FooterData = await fetch(Swiggy_API_URL_New)
     const FooterJson = await FooterData.json()
-    // console.log(FooterJson,"FooterData")
+    console.log(FooterJson,"FooterData")
     // setCitiesData(FooterJson?.data.cards[11]?.card?.card?.cities )
-    // console.log(FooterJson?.data?.cards[9]?.card?.card?.cities ,"cities name")
-    // console.log(FooterJson?.data?.cards[6]?.card?.card?.cuisines ,"cuisines name")
-    // console.log(FooterJson?.data?.cards[5]?.card?.card?.brands ,"brands name")
-    // console.log(FooterJson?.data?.cards[8]?.card?.card ,"download  info")
+    console.log(FooterJson?.data?.cards[1]?.card?.card?.cities ,"cities name")
+
+    console.log(FooterJson?.data?.cards[4]?.card?.card?.brands ,"brands name")
+    console.log(FooterJson?.data?.cards[7]?.card?.card ,"download  info")
 
     setFooterData(FooterJson)
   }
 
     return(<>
   <div className="footer-outer">
-   {/* <h1>Footer</h1> */}
 
-
-
- <div className="downloadInfo">
- <div className="textBox">
- <p className="infoText">{FooterData?.data?.cards[8]?.card?.card?.title}</p></div>
- <div className="appImagebox">
- <a href={FooterData?.data?.cards[8]?.card?.card?.androidAppLink}><img className="appImage" src={Swiggy_IMAGE_CDN_URL+FooterData?.data?.cards[8]?.card?.card?.androidAppImage} /></a></div>
- <div className="appImagebox"><a href={FooterData?.data?.cards[8]?.card?.card?.iosAppLink} ><img className="appImage" src={Swiggy_IMAGE_CDN_URL+FooterData?.data?.cards[8]?.card?.card?.iosAppImage} /></a></div>
- </div>
-
-{/* 
-   <div className="cuisineInfo">
-    <h2 className="cuisineText">{FooterData?.data?.cards[6]?.card?.card?.title}</h2>
-    <div className="cuisineCardOuter" key={FooterData?.data?.cards[6]?.card?.card?.cuisines?.id}>
-    {
-      FooterData?.data?.cards[6]?.card?.card?.cuisines?.map((cuisine)=><span className="cuisineCard">{cuisine.text}</span>)
-    }
-    </div>
-   
-
-   </div> */}
-
-   <br/>
-   {/* <div className="deliverTo">
-   <h2 className="cuisineText">We deliver to:</h2>
-    <div className="cuisineCardOuter" key={ FooterData?.data?.cards[9]?.card?.card?.cities?.id}>
-    {
-      FooterData?.data?.cards[9]?.card?.card?.cities?.map((citie)=><span className="cuisineCard">{citie.text}</span>)
-    }
-</div>
-   </div> */}
-   
-   {/* <div className="brandBox">
-  
+   <div className="footer-cards-outer">
      <h2 className="cuisineText">{FooterData?.data?.cards[5]?.card?.card?.title}</h2>
      <div  className="cuisineCardOuter">
     {
-      FooterData?.data?.cards[5]?.card?.card?.brands?.map((brand)=><span className="cuisineCard">{brand.text}</span>)
+      FooterData?.data?.cards[5]?.card?.card?.brands?.map((brand)=><span className="cuisineCard"><a href={brand.link}>{brand.text}</a></span>)
     }
 </div>
-   </div> */}
-   {/* <div className="nearMe">
-  
-     <h2 className="cuisineText">{FooterData?.data?.cards[7]?.card?.card?.title}</h2>
+   </div>
+
+   <div className="footer-cards-outer">
+     <h2 className="cuisineText">{FooterData?.data?.cards[4]?.card?.card?.title}</h2>
      <div  className="cuisineCardOuter">
     {
-      FooterData?.data?.cards[7]?.card?.card?.brands?.map((brand)=><span className="cuisineCard"><a href={brand.link}>{brand.text}</a></span>)
+      FooterData?.data?.cards[4]?.card?.card?.brands?.map((brand)=><span className="cuisineCard">{brand.text}</span>)
     }
 </div>
-   </div> */}
+   </div>
 
+   <div className="downloadInfo">
+ <div className="textBox">
+ <p className="infoText">{FooterData?.data?.cards[7]?.card?.card?.title}</p></div>
+ <div className="appImagebox">
+ <a href={FooterData?.data?.cards[7]?.card?.card?.androidAppLink}><img className="appImage" src={Swiggy_IMAGE_CDN_URL+FooterData?.data?.cards[7]?.card?.card?.androidAppImage} /></a></div>
+ <div className="appImagebox"><a href={FooterData?.data?.cards[7]?.card?.card?.iosAppLink} ><img className="appImage" src={Swiggy_IMAGE_CDN_URL+FooterData?.data?.cards[7]?.card?.card?.iosAppImage} /></a></div>
+ </div>
+
+  <div className="footer-end">
+  <div className="footer-end-sec-one">
+  <span className="footer-logo">FOODIES</span>
+  <span className="footer-end-text">© 2023 Bundl Technologies Pvt. Ltd</span></div>
+  <div className="footer-end-sec-two">
+  <h4>Company</h4>
+    <ul>
+      <li>About</li>
+      <li>Careers</li>
+      <li>Team</li>
+    </ul>
+  </div>
+  <div className="footer-end-sec-three">
+  <h4>Countact Us</h4>
+    <ul>
+      <li>Help & Support</li>
+      <li>Partner with us</li>
+      <li>Ride with us</li>
+    </ul>
+  </div>
+</div>
   </div>
     </>)
 }

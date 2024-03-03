@@ -22,10 +22,7 @@ return(<>
             <span className="time-box">{Data?.sla?.slaString}</span>
             <span className="Price-box">{Data?.costForTwo}</span>
         </div>
-        {/* <div className="offer-and-view-box"> */}
-            {/* <p className="offer-box">{Data?.aggregatedDiscountInfoV2?.descriptionList[0]?.meta || ""}</p> */}
-            {/* <button className="card-view-btn">Quick view</button> */}
-        {/* </div> */}
+      
     </div>
 </div>
 

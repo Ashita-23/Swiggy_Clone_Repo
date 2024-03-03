@@ -6,8 +6,9 @@
     border-radius: 5px;
     overflow: hidden;
     height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 1rem 0rem;
+
    
 }
 
@@ -155,4 +156,13 @@
         /* border: 1px solid red; */
     
     }
+    }
+
+
+@media (min-width: 1220px) {
+    
+    .card-outer{
+        border: none; 
+    }
+ 
     }

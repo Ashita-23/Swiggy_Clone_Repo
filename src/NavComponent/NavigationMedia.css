@@ -3,7 +3,7 @@
     .Nav-box{
         height: 4rem;
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         padding:  0rem .2rem;
     }
     .Logo-text{
@@ -14,8 +14,8 @@
         display: none;
     }
     .icone-ul-two li a{
-        font-size: 0.9rem;
-        padding: 0.5rem 0.4rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 0.2rem;
     }
 }
 

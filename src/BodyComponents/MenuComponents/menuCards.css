@@ -2,13 +2,14 @@
 .menuCard-Outer{
     height: auto;
     width: 90%;
-   border-bottom: 1px solid gray;
+  border: none;
     padding: 1rem 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid gray;
 }
 
 .menuCards-details{
