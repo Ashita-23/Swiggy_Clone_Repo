@@ -8,23 +8,26 @@ import { useState } from "react"
 
 const Footer = () =>{
 
-
    const [FooterData,setFooterData] = useState()
-  //  console.log(FooterData , "FD")
+   const [ShowMore,setShowMore]=useState(false)
+   console.log(FooterData , "FooterData")
   useEffect(()=>{
     getFooterData()
   },[])
 
+  // function ShowMoreHandler(){
+
+  // }
 
   async function  getFooterData (){
     const FooterData = await fetch(Swiggy_API_URL_New)
     const FooterJson = await FooterData.json()
-    console.log(FooterJson,"FooterData")
+    // console.log(FooterJson,"FooterData")
     // setCitiesData(FooterJson?.data.cards[11]?.card?.card?.cities )
-    console.log(FooterJson?.data?.cards[1]?.card?.card?.cities ,"cities name")
+    // console.log(FooterJson?.data?.cards[1]?.card?.card?.cities ,"cities name")
 
-    console.log(FooterJson?.data?.cards[4]?.card?.card?.brands ,"brands name")
-    console.log(FooterJson?.data?.cards[7]?.card?.card ,"download  info")
+    // console.log(FooterJson?.data?.cards[4]?.card?.card?.brands ,"brands name")
+    // console.log(FooterJson?.data?.cards[7]?.card?.card ,"download  info")
 
     setFooterData(FooterJson)
   }
@@ -32,23 +35,32 @@ const Footer = () =>{
     return(<>
   <div className="footer-outer">
 
-   <div className="footer-cards-outer">
+   <div className="footer-cards-outer  ">
      <h2 className="cuisineText">{FooterData?.data?.cards[5]?.card?.card?.title}</h2>
-     <div  className="cuisineCardOuter">
+     <div  className={!ShowMore?" cuisineCardOuter2":"cuisineCardOuter2 cuisineCardOuter "}>
     {
       FooterData?.data?.cards[5]?.card?.card?.brands?.map((brand)=><span className="cuisineCard"><a href={brand.link}>{brand.text}</a></span>)
     }
+
 </div>
+  {
+    !ShowMore ? <span className="cuisineCard" onClick={()=>setShowMore(!ShowMore)}>Show More </span>:
+    <span className="cuisineCard" onClick={()=>setShowMore(!ShowMore)} >Show Less</span> } 
    </div>
 
    <div className="footer-cards-outer">
      <h2 className="cuisineText">{FooterData?.data?.cards[4]?.card?.card?.title}</h2>
-     <div  className="cuisineCardOuter">
+     <div  className={!ShowMore?" cuisineCardOuter2":"cuisineCardOuter2 cuisineCardOuter "}>
     {
       FooterData?.data?.cards[4]?.card?.card?.brands?.map((brand)=><span className="cuisineCard">{brand.text}</span>)
     }
 </div>
+   {
+    !ShowMore ? <span className="cuisineCard" onClick={()=>setShowMore(!ShowMore)}>Show More </span>:
+    <span className="cuisineCard" onClick={()=>setShowMore(!ShowMore)} >Show Less</span> } 
    </div>
+
+
 
    <div className="downloadInfo">
  <div className="textBox">

@@ -24,6 +24,7 @@ a:hover{
 
 .footer-cards-outer{
     /* border: 1px solid red; */
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
+
 .cuisineInfo{
     /* border: 1px solid blue; */
     height: auto;
@@ -54,6 +56,16 @@ justify-content: space-evenly;
 /* border: 1px solid rgb(157, 157, 243); */
 
 }
+
+.cuisineCardOuter2{
+    height: 37vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    }
 
 .cuisineText{
     /* border: 1px solid red; */

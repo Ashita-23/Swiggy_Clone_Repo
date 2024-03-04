@@ -19,6 +19,10 @@
     height: auto;
 flex-direction:column;
 }
+/* .cuisineCardOuter2{
+    height: 24vh;
+    flex-direction:column;
+    } */
 .cuisineText{
     width: 100%;
     font-size: 1.1rem;
